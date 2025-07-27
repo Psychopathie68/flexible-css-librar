@@ -272,4 +272,4 @@ Merci à tous les contributeurs qui ont participé à ce projet !
 
 ---
 
-**Cette bibliothèque s'adapte à TOUS vos besoins !** 🎨✨ 
+**Cette bibliothèque s'adapte à TOUS vos besoins !** 🎨✨
