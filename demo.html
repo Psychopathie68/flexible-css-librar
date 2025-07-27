@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible CSS Library - Démonstration</title>
+    <link rel="stylesheet" href="dist/flexible-css.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .demo-section {
+            padding: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+        .demo-section h2 {
+            color: #333;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #007bff;
+        }
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .demo-item {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+        .demo-item h3 {
+            margin-top: 0;
+            color: #555;
+        }
+        .code-example {
+            background: #f4f4f4;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .navbar {
+            background: #333;
+            padding: 1rem 2rem;
+        }
+        .navbar-brand {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .nav-links {
+            float: right;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1rem;
+        }
+        .nav-links a:hover {
+            color: #007bff;
+        }
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar clearfix">
+        <a href="#" class="navbar-brand">Flexible CSS</a>
+        <div class="nav-links">
+            <a href="#buttons">Boutons</a>
+            <a href="#cards">Cartes</a>
+            <a href="#forms">Formulaires</a>
+            <a href="#alerts">Alertes</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Flexible CSS Library</h1>
+        <p>Une bibliothèque CSS moderne, flexible et configurable pour tous types de sites web</p>
+        <button class="btn btn-primary btn-lg">Commencer</button>
+        <button class="btn btn-outline btn-lg">Documentation</button>
+    </section>
+
+    <!-- Buttons Section -->
+    <section id="buttons" class="demo-section">
+        <h2>🎯 Boutons</h2>
+        <div class="demo-grid">
+            <div class="demo-item">
+                <h3>Boutons de base</h3>
+                <button class="btn btn-primary">Primaire</button>
+                <button class="btn btn-secondary">Secondaire</button>
+                <button class="btn btn-success">Succès</button>
+                <button class="btn btn-danger">Danger</button>
+                <button class="btn btn-warning">Attention</button>
+                <button class="btn btn-info">Info</button>
+                
+                <div class="code-example">
+&lt;button class="btn btn-primary"&gt;Primaire&lt;/button&gt;
+&lt;button class="btn btn-secondary"&gt;Secondaire&lt;/button&gt;
+                </div>
+            </div>
+            
+            <div class="demo-item">
+                <h3>Tailles de boutons</h3>
+                <button class="btn btn-primary btn-sm">Petit</button>
+                <button class="btn btn-primary">Normal</button>
+                <button class="btn btn-primary btn-lg">Grand</button>
+                
+                <div class="code-example">
+&lt;button class="btn btn-primary btn-sm"&gt;Petit&lt;/button&gt;
+&lt;button class="btn btn-primary btn-lg"&gt;Grand&lt;/button&gt;
+                </div>
+            </div>
+            
+            <div class="demo-item">
+                <h3>Boutons outline</h3>
+                <button class="btn btn-outline">Outline</button>
+                <button class="btn btn-outline btn-primary">Primaire</button>
+                <button class="btn btn-outline btn-success">Succès</button>
+                
+                <div class="code-example">
+&lt;button class="btn btn-outline btn-primary"&gt;Primaire&lt;/button&gt;
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section id="cards" class="demo-section">
+        <h2>🃏 Cartes</h2>
+        <div class="demo-grid">
+            <div class="demo-item">
+                <h3>Carte simple</h3>
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Titre de la carte</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>Contenu de la carte avec du texte et des éléments.</p>
+                        <button class="btn btn-primary">Action</button>
+                    </div>
+                </div>
+                
+                <div class="code-example">
+&lt;div class="card"&gt;
+  &lt;div class="card-header"&gt;
+    &lt;h4&gt;Titre de la carte&lt;/h4&gt;
+  &lt;/div&gt;
+  &lt;div class="card-body"&gt;
+    &lt;p&gt;Contenu...&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                </div>
+            </div>
+            
+            <div class="demo-item">
+                <h3>Carte avec image</h3>
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" alt="Placeholder" class="card-img">
+                    <div class="card-body">
+                        <h4>Carte avec image</h4>
+                        <p>Une carte avec une image en haut.</p>
+                        <button class="btn btn-outline">Voir plus</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Forms Section -->
+    <section id="forms" class="demo-section">
+        <h2>📝 Formulaires</h2>
+        <div class="demo-grid">
+            <div class="demo-item">
+                <h3>Formulaire de base</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input type="text" id="name" class="form-control" placeholder="Votre nom">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" placeholder="votre@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="form-control" rows="4" placeholder="Votre message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                </form>
+                
+                <div class="code-example">
+&lt;div class="form-group"&gt;
+  &lt;label for="name"&gt;Nom&lt;/label&gt;
+  &lt;input type="text" id="name" class="form-control"&gt;
+&lt;/div&gt;
+                </div>
+            </div>
+            
+            <div class="demo-item">
+                <h3>Checkboxes et Radios</h3>
+                <div class="form-group">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        Option 1
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        Option 2
+                    </label>
+                </div>
+                
+                <div class="form-group">
+                    <label class="radio">
+                        <input type="radio" name="radio-group">
+                        <span class="radiomark"></span>
+                        Choix 1
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="radio-group">
+                        <span class="radiomark"></span>
+                        Choix 2
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alerts Section -->
+    <section id="alerts" class="demo-section">
+        <h2>⚠️ Alertes</h2>
+        <div class="demo-grid">
+            <div class="demo-item">
+                <h3>Types d'alertes</h3>
+                <div class="alert alert-primary">
+                    <strong>Info :</strong> Ceci est une alerte primaire.
+                </div>
+                <div class="alert alert-success">
+                    <strong>Succès :</strong> Opération réussie !
+                </div>
+                <div class="alert alert-danger">
+                    <strong>Erreur :</strong> Quelque chose s'est mal passé.
+                </div>
+                <div class="alert alert-warning">
+                    <strong>Attention :</strong> Veuillez vérifier vos informations.
+                </div>
+                
+                <div class="code-example">
+&lt;div class="alert alert-primary"&gt;
+  &lt;strong&gt;Info :&lt;/strong&gt; Message d'alerte.
+&lt;/div&gt;
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Badges Section -->
+    <section class="demo-section">
+        <h2>🏷️ Badges</h2>
+        <div class="demo-grid">
+            <div class="demo-item">
+                <h3>Badges de base</h3>
+                <span class="badge badge-primary">Primaire</span>
+                <span class="badge badge-secondary">Secondaire</span>
+                <span class="badge badge-success">Succès</span>
+                <span class="badge badge-danger">Danger</span>
+                <span class="badge badge-warning">Attention</span>
+                <span class="badge badge-info">Info</span>
+                
+                <div class="code-example">
+&lt;span class="badge badge-primary"&gt;Primaire&lt;/span&gt;
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progress Section -->
+    <section class="demo-section">
+        <h2>📊 Barres de progression</h2>
+        <div class="demo-grid">
+            <div class="demo-item">
+                <h3>Progress bars</h3>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 25%">25%</div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar bg-success" style="width: 50%">50%</div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar bg-warning" style="width: 75%">75%</div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar bg-danger" style="width: 100%">100%</div>
+                </div>
+                
+                <div class="code-example">
+&lt;div class="progress"&gt;
+  &lt;div class="progress-bar" style="width: 25%"&gt;25%&lt;/div&gt;
+&lt;/div&gt;
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toggles Section -->
+    <section class="demo-section">
+        <h2>🔘 Toggles</h2>
+        <div class="demo-grid">
+            <div class="demo-item">
+                <h3>Switches</h3>
+                <label class="toggle">
+                    <input type="checkbox" class="toggle-input">
+                    <span class="toggle-switch"></span>
+                    <span class="toggle-label">Toggle normal</span>
+                </label>
+                
+                <label class="toggle toggle-primary">
+                    <input type="checkbox" class="toggle-input" checked>
+                    <span class="toggle-switch"></span>
+                    <span class="toggle-label">Toggle primaire</span>
+                </label>
+                
+                <div class="code-example">
+&lt;label class="toggle"&gt;
+  &lt;input type="checkbox" class="toggle-input"&gt;
+  &lt;span class="toggle-switch"&gt;&lt;/span&gt;
+  &lt;span class="toggle-label"&gt;Toggle&lt;/span&gt;
+&lt;/label&gt;
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumbs Section -->
+    <section class="demo-section">
+        <h2>🍞 Breadcrumbs</h2>
+        <div class="demo-grid">
+            <div class="demo-item">
+                <h3>Fil d'Ariane</h3>
+                <nav class="breadcrumb">
+                    <span class="breadcrumb-item">
+                        <a href="#">Accueil</a>
+                    </span>
+                    <span class="breadcrumb-item">
+                        <a href="#">Catégorie</a>
+                    </span>
+                    <span class="breadcrumb-item active">
+                        Page actuelle
+                    </span>
+                </nav>
+                
+                <div class="code-example">
+&lt;nav class="breadcrumb"&gt;
+  &lt;span class="breadcrumb-item"&gt;
+    &lt;a href="#"&gt;Accueil&lt;/a&gt;
+  &lt;/span&gt;
+  &lt;span class="breadcrumb-item active"&gt;
+    Page actuelle
+  &lt;/span&gt;
+&lt;/nav&gt;
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pagination Section -->
+    <section class="demo-section">
+        <h2>📄 Pagination</h2>
+        <div class="demo-grid">
+            <div class="demo-item">
+                <h3>Navigation de pages</h3>
+                <nav class="pagination">
+                    <a href="#" class="pagination-item pagination-prev">‹</a>
+                    <a href="#" class="pagination-item">1</a>
+                    <a href="#" class="pagination-item active">2</a>
+                    <a href="#" class="pagination-item">3</a>
+                    <a href="#" class="pagination-item">4</a>
+                    <a href="#" class="pagination-item pagination-next">›</a>
+                </nav>
+                
+                <div class="code-example">
+&lt;nav class="pagination"&gt;
+  &lt;a href="#" class="pagination-item pagination-prev"&gt;‹&lt;/a&gt;
+  &lt;a href="#" class="pagination-item active"&gt;2&lt;/a&gt;
+  &lt;a href="#" class="pagination-item pagination-next"&gt;›&lt;/a&gt;
+&lt;/nav&gt;
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- List Groups Section -->
+    <section class="demo-section">
+        <h2>📋 List Groups</h2>
+        <div class="demo-grid">
+            <div class="demo-item">
+                <h3>Groupes de listes</h3>
+                <div class="list-group">
+                    <a href="#" class="list-group-item">Premier élément</a>
+                    <a href="#" class="list-group-item active">Élément actif</a>
+                    <a href="#" class="list-group-item">Troisième élément</a>
+                    <a href="#" class="list-group-item">Quatrième élément</a>
+                </div>
+                
+                <div class="code-example">
+&lt;div class="list-group"&gt;
+  &lt;a href="#" class="list-group-item"&gt;Élément&lt;/a&gt;
+  &lt;a href="#" class="list-group-item active"&gt;Actif&lt;/a&gt;
+&lt;/div&gt;
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spinners Section -->
+    <section class="demo-section">
+        <h2>🌀 Spinners</h2>
+        <div class="demo-grid">
+            <div class="demo-item">
+                <h3>Indicateurs de chargement</h3>
+                <div class="spinner"></div>
+                <div class="spinner spinner-sm"></div>
+                <div class="spinner spinner-lg"></div>
+                
+                <div class="code-example">
+&lt;div class="spinner"&gt;&lt;/div&gt;
+&lt;div class="spinner spinner-sm"&gt;&lt;/div&gt;
+&lt;div class="spinner spinner-lg"&gt;&lt;/div&gt;
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid System Section -->
+    <section class="demo-section">
+        <h2>📐 Système de grille</h2>
+        <div class="demo-grid">
+            <div class="demo-item">
+                <h3>Grille responsive</h3>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5>Colonne 6</h5>
+                                    <p>Cette colonne prend 6/12 de la largeur.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5>Colonne 6</h5>
+                                    <p>Cette colonne prend aussi 6/12.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5>Colonne 4</h5>
+                                    <p>4/12 de la largeur.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5>Colonne 4</h5>
+                                    <p>4/12 de la largeur.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5>Colonne 4</h5>
+                                    <p>4/12 de la largeur.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="code-example">
+&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-6"&gt;Colonne 6&lt;/div&gt;
+    &lt;div class="col-6"&gt;Colonne 6&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="demo-section" style="background: #333; color: white; text-align: center;">
+        <h2>Flexible CSS Library</h2>
+        <p>Une bibliothèque CSS moderne et flexible pour tous vos projets web</p>
+        <p>© 2024 - Créé avec ❤️</p>
+    </footer>
+
+    <script>
+        // Simple JavaScript pour les interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling pour les liens de navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
