@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎨 Flexible CSS Library - Démonstration des Thèmes</title>
+    <link rel="stylesheet" href="dist/flexible-css.css">
+    <style>
+        .theme-demo {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .theme-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .theme-switcher {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 1000;
+            background: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .theme-switcher select {
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="theme-switcher">
+        <label for="theme-select">Changer de thème :</label>
+        <select id="theme-select" onchange="changeTheme(this.value)">
+            <option value="modern">🎨 Moderne</option>
+            <option value="dark">🌙 Sombre</option>
+            <option value="minimal">✨ Minimaliste</option>
+            <option value="vibrant">🌈 Coloré</option>
+            <option value="corporate">🏢 Corporate</option>
+            <option value="creative">🎭 Créatif</option>
+            <option value="tech">💻 Tech</option>
+            <option value="vintage">🎭 Vintage</option>
+            <option value="nature">🌿 Nature</option>
+            <option value="luxury">💎 Luxe</option>
+        </select>
+    </div>
+
+    <div class="container">
+        <h1 class="text-center">🎨 Flexible CSS Library</h1>
+        <p class="text-center">La bibliothèque CSS qui s'adapte à TOUS les styles de sites</p>
+
+        <!-- Thème Moderne -->
+        <div class="theme-demo" data-theme="modern">
+            <h2 class="theme-title">🎨 Thème Moderne</h2>
+            <div class="row">
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Design Moderne</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Interface épurée et professionnelle.</p>
+                            <button class="btn btn-primary">Action Principale</button>
+                            <button class="btn btn-secondary">Action Secondaire</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="alert alert-info">
+                        <strong>Info :</strong> Thème par défaut, parfait pour les sites modernes.
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 75%">75%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thème Sombre -->
+        <div class="theme-demo" data-theme="dark">
+            <h2 class="theme-title">🌙 Thème Sombre</h2>
+            <div class="row">
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Mode Sombre</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Interface sombre pour un confort optimal.</p>
+                            <button class="btn btn-primary">Explorer</button>
+                            <button class="btn btn-secondary">Paramètres</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="alert alert-success">
+                        <strong>Succès :</strong> Mode sombre activé pour vos yeux !
+                    </div>
+                    <span class="badge badge-primary">Online</span>
+                    <span class="badge badge-success">Actif</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thème Minimaliste -->
+        <div class="theme-demo" data-theme="minimal">
+            <h2 class="theme-title">✨ Thème Minimaliste</h2>
+            <div class="row">
+                <div class="col-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Simplicité</h3>
+                            <p>L'essentiel, rien de plus. Design épuré et fonctionnel.</p>
+                            <button class="btn btn-primary">Découvrir</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Contact</h3>
+                            <form>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Envoyer</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thème Coloré -->
+        <div class="theme-demo" data-theme="vibrant">
+            <h2 class="theme-title">🌈 Thème Coloré</h2>
+            <div class="row">
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Produit 1</h3>
+                            <span class="badge badge-danger">-20%</span>
+                            <p>Description du produit...</p>
+                            <button class="btn btn-primary">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Produit 2</h3>
+                            <span class="badge badge-warning">Nouveau</span>
+                            <p>Description du produit...</p>
+                            <button class="btn btn-success">Acheter maintenant</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Panier</h3>
+                            <span class="badge badge-primary">3 articles</span>
+                            <p>Total : €99.99</p>
+                            <button class="btn btn-danger">Commander</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thème Corporate -->
+        <div class="theme-demo" data-theme="corporate">
+            <h2 class="theme-title">🏢 Thème Corporate</h2>
+            <div class="row">
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Nos Services</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Solutions professionnelles adaptées à vos besoins.</p>
+                            <button class="btn btn-primary">En savoir plus</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Contact</h3>
+                            <form>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Votre email">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Nous contacter</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thème Créatif -->
+        <div class="theme-demo" data-theme="creative">
+            <h2 class="theme-title">🎭 Thème Créatif</h2>
+            <div class="row">
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Design Graphique</h3>
+                            <span class="badge badge-primary">Créatif</span>
+                            <p>Logos, identités visuelles, illustrations...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Photographie</h3>
+                            <span class="badge badge-success">Art</span>
+                            <p>Portraits, paysages, événements...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Web Design</h3>
+                            <span class="badge badge-warning">Innovant</span>
+                            <p>Sites web modernes et responsives...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thème Tech -->
+        <div class="theme-demo" data-theme="tech">
+            <h2 class="theme-title">💻 Thème Tech</h2>
+            <div class="row">
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Fonctionnalités</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 85%">85%</div>
+                            </div>
+                            <p>Développement en cours...</p>
+                            <button class="btn btn-primary">Tester</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>API Status</h3>
+                            <span class="badge badge-success">Online</span>
+                            <p>Tous les services fonctionnent parfaitement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thème Vintage -->
+        <div class="theme-demo" data-theme="vintage">
+            <h2 class="theme-title">🎭 Thème Vintage</h2>
+            <div class="row">
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Style Rétro</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Design classique avec un charme vintage.</p>
+                            <button class="btn btn-primary">Découvrir</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="alert alert-warning">
+                        <strong>Nostalgie :</strong> Retour aux années d'or du design.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thème Nature -->
+        <div class="theme-demo" data-theme="nature">
+            <h2 class="theme-title">🌿 Thème Nature</h2>
+            <div class="row">
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Écologique</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Design respectueux de l'environnement.</p>
+                            <button class="btn btn-success">En savoir plus</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="alert alert-success">
+                        <strong>Vert :</strong> 100% éco-responsable.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thème Luxe -->
+        <div class="theme-demo" data-theme="luxury">
+            <h2 class="theme-title">💎 Thème Luxe</h2>
+            <div class="row">
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Premium</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Excellence et sophistication.</p>
+                            <button class="btn btn-primary">Découvrir</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="alert alert-warning">
+                        <strong>Exclusif :</strong> Accès premium réservé.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function changeTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+        }
+    </script>
+</body>
+</html> 

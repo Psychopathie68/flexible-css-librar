@@ -1,92 +1,283 @@
 // ========================================
-// VARIABLES CSS - SYSTÈME DE PERSONNALISATION
+// VARIABLES CSS ULTRA-FLEXIBLES
 // ========================================
 
-// Couleurs principales
+// Thèmes prédéfinis pour tous les styles de sites
 :root {
-  // Couleurs de base
-  --primary-color: #007bff;
-  --secondary-color: #6c757d;
-  --success-color: #28a745;
-  --danger-color: #dc3545;
-  --warning-color: #ffc107;
-  --info-color: #17a2b8;
-  --light-color: #f8f9fa;
-  --dark-color: #343a40;
+  // ========================================
+  // THÈMES PRÉDÉFINIS
+  // ========================================
   
-  // Couleurs de fond
+  // Thème moderne (par défaut)
+  --theme-modern-primary: #007bff;
+  --theme-modern-secondary: #6c757d;
+  --theme-modern-success: #28a745;
+  --theme-modern-danger: #dc3545;
+  --theme-modern-warning: #ffc107;
+  --theme-modern-info: #17a2b8;
+  --theme-modern-light: #f8f9fa;
+  --theme-modern-dark: #343a40;
+  
+  // Thème sombre/Noir
+  --theme-dark-primary: #0d6efd;
+  --theme-dark-secondary: #6c757d;
+  --theme-dark-success: #198754;
+  --theme-dark-danger: #dc3545;
+  --theme-dark-warning: #ffc107;
+  --theme-dark-info: #0dcaf0;
+  --theme-dark-light: #f8f9fa;
+  --theme-dark-dark: #212529;
+  --theme-dark-bg: #121212;
+  --theme-dark-surface: #1e1e1e;
+  --theme-dark-text: #ffffff;
+  
+  // Thème minimaliste
+  --theme-minimal-primary: #000000;
+  --theme-minimal-secondary: #666666;
+  --theme-minimal-success: #333333;
+  --theme-minimal-danger: #ff0000;
+  --theme-minimal-warning: #ffaa00;
+  --theme-minimal-info: #0066cc;
+  --theme-minimal-light: #fafafa;
+  --theme-minimal-dark: #000000;
+  --theme-minimal-bg: #ffffff;
+  --theme-minimal-surface: #f8f8f8;
+  --theme-minimal-text: #333333;
+  
+  // Thème coloré/Vibrant
+  --theme-vibrant-primary: #ff6b6b;
+  --theme-vibrant-secondary: #4ecdc4;
+  --theme-vibrant-success: #45b7d1;
+  --theme-vibrant-danger: #ff4757;
+  --theme-vibrant-warning: #ffa502;
+  --theme-vibrant-info: #2ed573;
+  --theme-vibrant-light: #f1f2f6;
+  --theme-vibrant-dark: #2f3542;
+  --theme-vibrant-bg: #ffffff;
+  --theme-vibrant-surface: #f8f9fa;
+  --theme-vibrant-text: #2f3542;
+  
+  // Thème professionnel/Corporate
+  --theme-corporate-primary: #2c3e50;
+  --theme-corporate-secondary: #34495e;
+  --theme-corporate-success: #27ae60;
+  --theme-corporate-danger: #e74c3c;
+  --theme-corporate-warning: #f39c12;
+  --theme-corporate-info: #3498db;
+  --theme-corporate-light: #ecf0f1;
+  --theme-corporate-dark: #2c3e50;
+  --theme-corporate-bg: #ffffff;
+  --theme-corporate-surface: #f8f9fa;
+  --theme-corporate-text: #2c3e50;
+  
+  // Thème créatif/Artiste
+  --theme-creative-primary: #e91e63;
+  --theme-creative-secondary: #9c27b0;
+  --theme-creative-success: #4caf50;
+  --theme-creative-danger: #f44336;
+  --theme-creative-warning: #ff9800;
+  --theme-creative-info: #2196f3;
+  --theme-creative-light: #fce4ec;
+  --theme-creative-dark: #880e4f;
+  --theme-creative-bg: #ffffff;
+  --theme-creative-surface: #fafafa;
+  --theme-creative-text: #212121;
+  
+  // Thème tech/Startup
+  --theme-tech-primary: #6366f1;
+  --theme-tech-secondary: #8b5cf6;
+  --theme-tech-success: #10b981;
+  --theme-tech-danger: #ef4444;
+  --theme-tech-warning: #f59e0b;
+  --theme-tech-info: #06b6d4;
+  --theme-tech-light: #f8fafc;
+  --theme-tech-dark: #0f172a;
+  --theme-tech-bg: #ffffff;
+  --theme-tech-surface: #f1f5f9;
+  --theme-tech-text: #1e293b;
+  
+  // Thème rétro/Vintage
+  --theme-vintage-primary: #8b4513;
+  --theme-vintage-secondary: #a0522d;
+  --theme-vintage-success: #556b2f;
+  --theme-vintage-danger: #b22222;
+  --theme-vintage-warning: #daa520;
+  --theme-vintage-info: #4682b4;
+  --theme-vintage-light: #f5f5dc;
+  --theme-vintage-dark: #2f4f4f;
+  --theme-vintage-bg: #faf0e6;
+  --theme-vintage-surface: #f5f5dc;
+  --theme-vintage-text: #2f4f4f;
+  
+  // Thème nature/Écologique
+  --theme-nature-primary: #2d5a27;
+  --theme-nature-secondary: #4a7c59;
+  --theme-nature-success: #6b8e23;
+  --theme-nature-danger: #8b0000;
+  --theme-nature-warning: #daa520;
+  --theme-nature-info: #4682b4;
+  --theme-nature-light: #f0f8f0;
+  --theme-nature-dark: #2f4f2f;
+  --theme-nature-bg: #fafafa;
+  --theme-nature-surface: #f0f8f0;
+  --theme-nature-text: #2f4f2f;
+  
+  // Thème luxe/Premium
+  --theme-luxury-primary: #d4af37;
+  --theme-luxury-secondary: #b8860b;
+  --theme-luxury-success: #228b22;
+  --theme-luxury-danger: #b22222;
+  --theme-luxury-warning: #daa520;
+  --theme-luxury-info: #4682b4;
+  --theme-luxury-light: #fff8dc;
+  --theme-luxury-dark: #2f2f2f;
+  --theme-luxury-bg: #ffffff;
+  --theme-luxury-surface: #fff8dc;
+  --theme-luxury-text: #2f2f2f;
+  
+  // ========================================
+  // VARIABLES ACTIVES (par défaut = moderne)
+  // ========================================
+  --primary-color: var(--theme-modern-primary);
+  --secondary-color: var(--theme-modern-secondary);
+  --success-color: var(--theme-modern-success);
+  --danger-color: var(--theme-modern-danger);
+  --warning-color: var(--theme-modern-warning);
+  --info-color: var(--theme-modern-info);
+  --light-color: var(--theme-modern-light);
+  --dark-color: var(--theme-modern-dark);
+  
+  // Couleurs de base
   --bg-primary: #ffffff;
   --bg-secondary: #f8f9fa;
-  --bg-dark: #343a40;
-  
-  // Couleurs de texte
   --text-primary: #212529;
   --text-secondary: #6c757d;
-  --text-muted: #6c757d;
-  --text-light: #ffffff;
-  
-  // Couleurs de bordure
   --border-color: #dee2e6;
-  --border-light: #e9ecef;
   
-  // Typographie
-  --font-family-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --font-family-heading: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --font-family-mono: 'Courier New', Courier, monospace;
+  // ========================================
+  // TYPOGRAPHIE FLEXIBLE
+  // ========================================
   
-  --font-size-base: 1rem;
+  // Familles de polices par style
+  --font-modern: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+  --font-classic: 'Georgia', 'Times New Roman', serif;
+  --font-tech: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+  --font-creative: 'Playfair Display', 'Georgia', serif;
+  --font-corporate: 'Open Sans', 'Arial', sans-serif;
+  --font-vintage: 'Baskerville', 'Times New Roman', serif;
+  
+  // Police active (par défaut = moderne)
+  --font-family-base: var(--font-modern);
+  --font-family-heading: var(--font-modern);
+  --font-family-code: var(--font-tech);
+  
+  // Tailles de police
+  --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
-  --font-size-lg: 1.25rem;
-  --font-size-xl: 1.5rem;
-  --font-size-2xl: 2rem;
-  --font-size-3xl: 2.5rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
   
+  // Poids de police
   --font-weight-light: 300;
   --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
   --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
   
-  --line-height-base: 1.5;
-  --line-height-sm: 1.25;
-  --line-height-lg: 1.75;
+  // Hauteur de ligne
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
   
-  // Espacement
-  --spacing-xs: 0.25rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 1.5rem;
-  --spacing-xl: 3rem;
-  --spacing-2xl: 6rem;
+  // ========================================
+  // ESPACEMENTS FLEXIBLES
+  // ========================================
   
-  // Bordures et rayons
-  --border-radius: 0.375rem;
-  --border-radius-sm: 0.25rem;
+  // Système d'espacement
+  --spacing-xs: 0.25rem;   // 4px
+  --spacing-sm: 0.5rem;    // 8px
+  --spacing-md: 1rem;      // 16px
+  --spacing-lg: 1.5rem;    // 24px
+  --spacing-xl: 2rem;      // 32px
+  --spacing-2xl: 3rem;     // 48px
+  --spacing-3xl: 4rem;     // 64px
+  --spacing-4xl: 6rem;     // 96px
+  
+  // ========================================
+  // BORDURES ET OMBRES FLEXIBLES
+  // ========================================
+  
+  // Rayons de bordure
+  --border-radius-none: 0;
+  --border-radius-sm: 0.125rem;
+  --border-radius-md: 0.25rem;
   --border-radius-lg: 0.5rem;
-  --border-radius-xl: 1rem;
+  --border-radius-xl: 0.75rem;
+  --border-radius-2xl: 1rem;
   --border-radius-full: 9999px;
   
-  --border-width: 1px;
-  --border-width-thick: 2px;
+  // Épaisseurs de bordure
+  --border-width-none: 0;
+  --border-width-sm: 1px;
+  --border-width-md: 2px;
+  --border-width-lg: 3px;
+  --border-width-xl: 4px;
   
   // Ombres
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inset: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
   
-  // Transitions
-  --transition-fast: 150ms ease-in-out;
-  --transition-base: 300ms ease-in-out;
-  --transition-slow: 500ms ease-in-out;
+  // ========================================
+  // TRANSITIONS ET ANIMATIONS
+  // ========================================
   
-  // Breakpoints
+  // Durées de transition
+  --transition-fast: 150ms;
+  --transition-normal: 300ms;
+  --transition-slow: 500ms;
+  
+  // Fonctions d'easing
+  --ease-linear: linear;
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  // ========================================
+  // POINTS DE RUPTURE RESPONSIVE
+  // ========================================
+  
+  --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
   --breakpoint-2xl: 1400px;
   
-  // Z-index
+  // ========================================
+  // CONTAINERS RESPONSIFS
+  // ========================================
+  
+  --container-sm: 540px;
+  --container-md: 720px;
+  --container-lg: 960px;
+  --container-xl: 1140px;
+  --container-2xl: 1320px;
+  --container-padding: var(--spacing-md);
+  
+  // ========================================
+  // Z-INDEX
+  // ========================================
+  
   --z-dropdown: 1000;
   --z-sticky: 1020;
   --z-fixed: 1030;
@@ -94,39 +285,176 @@
   --z-modal: 1050;
   --z-popover: 1060;
   --z-tooltip: 1070;
-  
-  // Container
-  --container-sm: 540px;
-  --container-md: 720px;
-  --container-lg: 960px;
-  --container-xl: 1140px;
-  --container-2xl: 1320px;
-  --container-padding: var(--spacing-md);
+  --z-toast: 1080;
 }
 
-// Thèmes prédéfinis
+// ========================================
+// CLASSES UTILITAIRES POUR CHANGER DE THÈME
+// ========================================
+
+// Thème sombre
 [data-theme="dark"] {
-  --bg-primary: #1a1a1a;
-  --bg-secondary: #2d2d2d;
-  --text-primary: #ffffff;
-  --text-secondary: #b0b0b0;
-  --border-color: #404040;
-  --border-light: #333333;
+  --primary-color: var(--theme-dark-primary);
+  --secondary-color: var(--theme-dark-secondary);
+  --success-color: var(--theme-dark-success);
+  --danger-color: var(--theme-dark-danger);
+  --warning-color: var(--theme-dark-warning);
+  --info-color: var(--theme-dark-info);
+  --light-color: var(--theme-dark-light);
+  --dark-color: var(--theme-dark-dark);
+  --bg-primary: var(--theme-dark-bg);
+  --bg-secondary: var(--theme-dark-surface);
+  --text-primary: var(--theme-dark-text);
+  --text-secondary: #adb5bd;
+  --border-color: #495057;
 }
 
+// Thème minimaliste
 [data-theme="minimal"] {
-  --primary-color: #000000;
-  --secondary-color: #666666;
-  --bg-primary: #ffffff;
-  --bg-secondary: #fafafa;
-  --shadow: none;
-  --border-radius: 0;
+  --primary-color: var(--theme-minimal-primary);
+  --secondary-color: var(--theme-minimal-secondary);
+  --success-color: var(--theme-minimal-success);
+  --danger-color: var(--theme-minimal-danger);
+  --warning-color: var(--theme-minimal-warning);
+  --info-color: var(--theme-minimal-info);
+  --light-color: var(--theme-minimal-light);
+  --dark-color: var(--theme-minimal-dark);
+  --bg-primary: var(--theme-minimal-bg);
+  --bg-secondary: var(--theme-minimal-surface);
+  --text-primary: var(--theme-minimal-text);
+  --text-secondary: #666666;
+  --border-color: #e0e0e0;
+  --font-family-base: var(--font-minimal);
+  --font-family-heading: var(--font-minimal);
 }
 
-[data-theme="colorful"] {
-  --primary-color: #ff6b6b;
-  --secondary-color: #4ecdc4;
-  --success-color: #45b7d1;
-  --warning-color: #f9ca24;
-  --danger-color: #e74c3c;
+// Thème coloré
+[data-theme="vibrant"] {
+  --primary-color: var(--theme-vibrant-primary);
+  --secondary-color: var(--theme-vibrant-secondary);
+  --success-color: var(--theme-vibrant-success);
+  --danger-color: var(--theme-vibrant-danger);
+  --warning-color: var(--theme-vibrant-warning);
+  --info-color: var(--theme-vibrant-info);
+  --light-color: var(--theme-vibrant-light);
+  --dark-color: var(--theme-vibrant-dark);
+  --bg-primary: var(--theme-vibrant-bg);
+  --bg-secondary: var(--theme-vibrant-surface);
+  --text-primary: var(--theme-vibrant-text);
+  --text-secondary: #747d8c;
+  --border-color: #dfe4ea;
+}
+
+// Thème professionnel
+[data-theme="corporate"] {
+  --primary-color: var(--theme-corporate-primary);
+  --secondary-color: var(--theme-corporate-secondary);
+  --success-color: var(--theme-corporate-success);
+  --danger-color: var(--theme-corporate-danger);
+  --warning-color: var(--theme-corporate-warning);
+  --info-color: var(--theme-corporate-info);
+  --light-color: var(--theme-corporate-light);
+  --dark-color: var(--theme-corporate-dark);
+  --bg-primary: var(--theme-corporate-bg);
+  --bg-secondary: var(--theme-corporate-surface);
+  --text-primary: var(--theme-corporate-text);
+  --text-secondary: #7f8c8d;
+  --border-color: #bdc3c7;
+  --font-family-base: var(--font-corporate);
+  --font-family-heading: var(--font-corporate);
+}
+
+// Thème créatif
+[data-theme="creative"] {
+  --primary-color: var(--theme-creative-primary);
+  --secondary-color: var(--theme-creative-secondary);
+  --success-color: var(--theme-creative-success);
+  --danger-color: var(--theme-creative-danger);
+  --warning-color: var(--theme-creative-warning);
+  --info-color: var(--theme-creative-info);
+  --light-color: var(--theme-creative-light);
+  --dark-color: var(--theme-creative-dark);
+  --bg-primary: var(--theme-creative-bg);
+  --bg-secondary: var(--theme-creative-surface);
+  --text-primary: var(--theme-creative-text);
+  --text-secondary: #757575;
+  --border-color: #e0e0e0;
+  --font-family-base: var(--font-creative);
+  --font-family-heading: var(--font-creative);
+}
+
+// Thème tech
+[data-theme="tech"] {
+  --primary-color: var(--theme-tech-primary);
+  --secondary-color: var(--theme-tech-secondary);
+  --success-color: var(--theme-tech-success);
+  --danger-color: var(--theme-tech-danger);
+  --warning-color: var(--theme-tech-warning);
+  --info-color: var(--theme-tech-info);
+  --light-color: var(--theme-tech-light);
+  --dark-color: var(--theme-tech-dark);
+  --bg-primary: var(--theme-tech-bg);
+  --bg-secondary: var(--theme-tech-surface);
+  --text-primary: var(--theme-tech-text);
+  --text-secondary: #64748b;
+  --border-color: #e2e8f0;
+  --font-family-base: var(--font-tech);
+  --font-family-heading: var(--font-tech);
+}
+
+// Thème vintage
+[data-theme="vintage"] {
+  --primary-color: var(--theme-vintage-primary);
+  --secondary-color: var(--theme-vintage-secondary);
+  --success-color: var(--theme-vintage-success);
+  --danger-color: var(--theme-vintage-danger);
+  --warning-color: var(--theme-vintage-warning);
+  --info-color: var(--theme-vintage-info);
+  --light-color: var(--theme-vintage-light);
+  --dark-color: var(--theme-vintage-dark);
+  --bg-primary: var(--theme-vintage-bg);
+  --bg-secondary: var(--theme-vintage-surface);
+  --text-primary: var(--theme-vintage-text);
+  --text-secondary: #696969;
+  --border-color: #d2b48c;
+  --font-family-base: var(--font-vintage);
+  --font-family-heading: var(--font-vintage);
+}
+
+// Thème nature
+[data-theme="nature"] {
+  --primary-color: var(--theme-nature-primary);
+  --secondary-color: var(--theme-nature-secondary);
+  --success-color: var(--theme-nature-success);
+  --danger-color: var(--theme-nature-danger);
+  --warning-color: var(--theme-nature-warning);
+  --info-color: var(--theme-nature-info);
+  --light-color: var(--theme-nature-light);
+  --dark-color: var(--theme-nature-dark);
+  --bg-primary: var(--theme-nature-bg);
+  --bg-secondary: var(--theme-nature-surface);
+  --text-primary: var(--theme-nature-text);
+  --text-secondary: #556b2f;
+  --border-color: #90ee90;
+  --font-family-base: var(--font-classic);
+  --font-family-heading: var(--font-classic);
+}
+
+// Thème luxe
+[data-theme="luxury"] {
+  --primary-color: var(--theme-luxury-primary);
+  --secondary-color: var(--theme-luxury-secondary);
+  --success-color: var(--theme-luxury-success);
+  --danger-color: var(--theme-luxury-danger);
+  --warning-color: var(--theme-luxury-warning);
+  --info-color: var(--theme-luxury-info);
+  --light-color: var(--theme-luxury-light);
+  --dark-color: var(--theme-luxury-dark);
+  --bg-primary: var(--theme-luxury-bg);
+  --bg-secondary: var(--theme-luxury-surface);
+  --text-primary: var(--theme-luxury-text);
+  --text-secondary: #696969;
+  --border-color: #daa520;
+  --font-family-base: var(--font-classic);
+  --font-family-heading: var(--font-classic);
 } 
