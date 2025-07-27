@@ -1,391 +1,275 @@
-# Flexible CSS Library
+# 🎨 Flexible CSS Library
 
-Une bibliothèque CSS moderne, flexible et configurable pour tous types de sites web. Cette bibliothèque offre un système de design complet avec des composants réutilisables, un système de grille responsive et des utilitaires CSS.
+> **La bibliothèque CSS ultra-flexible avec 10 thèmes prédéfinis pour TOUS les styles de sites web**
 
-## 🚀 Caractéristiques
+[![npm version](https://badge.fury.io/js/flexible-css-library.svg)](https://badge.fury.io/js/flexible-css-library)
+[![GitHub stars](https://img.shields.io/github/stars/Psychopathie68/flexible-css-librar.svg)](https://github.com/Psychopathie68/flexible-css-librar)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-- **Système de variables CSS** pour une personnalisation facile
-- **Composants réutilisables** (boutons, cartes, formulaires, etc.)
-- **Système de grille responsive** avec Flexbox
-- **Utilitaires CSS** complets
-- **Thèmes prédéfinis** (dark, minimal, colorful)
-- **Animations et transitions** fluides
-- **Accessibilité** intégrée
-- **Support mobile-first**
+## 🚀 Installation
 
-## 📦 Installation
-
-### Via CDN
+### Via CDN (Recommandé)
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flexible-css-library@1.0.0/dist/flexible-css.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flexible-css-library@1.0.0/dist/flexible-css.css">
 ```
 
-### Via npm
+### Via NPM
 ```bash
 npm install flexible-css-library
 ```
 
-### Téléchargement direct
-Téléchargez les fichiers CSS depuis le dossier `dist/` et incluez-les dans votre projet.
-
-## 🎨 Configuration
-
-### Variables CSS personnalisées
-Vous pouvez personnaliser l'apparence en redéfinissant les variables CSS :
-
-```css
-:root {
-  --primary-color: #your-color;
-  --font-family-base: 'Your Font', sans-serif;
-  --border-radius: 8px;
-  --spacing-md: 1.5rem;
-}
+### Via Yarn
+```bash
+yarn add flexible-css-library
 ```
 
-### Thèmes prédéfinis
-Utilisez les thèmes prédéfinis en ajoutant l'attribut `data-theme` :
+## 🎯 Utilisation Ultra-Simple
 
+### Changer de thème en 1 ligne !
 ```html
+<!-- Thème moderne (par défaut) -->
+<html data-theme="modern">
+
 <!-- Thème sombre -->
 <html data-theme="dark">
 
-<!-- Thème minimal -->
+<!-- Thème minimaliste -->
 <html data-theme="minimal">
 
-<!-- Thème coloré -->
-<html data-theme="colorful">
+<!-- Thème coloré/vibrant -->
+<html data-theme="vibrant">
+
+<!-- Thème professionnel -->
+<html data-theme="corporate">
+
+<!-- Thème créatif -->
+<html data-theme="creative">
+
+<!-- Thème tech/startup -->
+<html data-theme="tech">
+
+<!-- Thème vintage/rétro -->
+<html data-theme="vintage">
+
+<!-- Thème nature/écologique -->
+<html data-theme="nature">
+
+<!-- Thème luxe/premium -->
+<html data-theme="luxury">
 ```
 
-## 📐 Système de Grille
-
-### Container
+### Exemple complet
 ```html
-<div class="container">
-  <!-- Contenu centré avec largeur maximale -->
-</div>
-
-<div class="container-fluid">
-  <!-- Contenu pleine largeur -->
-</div>
+<!DOCTYPE html>
+<html data-theme="corporate">
+<head>
+    <title>Mon Site</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flexible-css-library@1.0.0/dist/flexible-css.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mon Site Professionnel</h1>
+        
+        <div class="row">
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Nos Services</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Solutions professionnelles adaptées à vos besoins.</p>
+                        <button class="btn btn-primary">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Contact</h3>
+                        <form>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Votre email">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Nous contacter</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
 ```
 
-### Grille responsive
-```html
-<div class="row">
-  <div class="col-12 col-md-6 col-lg-4">
-    <!-- Colonne qui prend 12/12 sur mobile, 6/12 sur tablette, 4/12 sur desktop -->
-  </div>
-</div>
-```
+## 🎨 Thèmes Disponibles
 
-### Alignement
-```html
-<div class="row row-center row-middle">
-  <!-- Centré horizontalement et verticalement -->
-</div>
-```
+### 🎨 Moderne
+Parfait pour les sites web contemporains avec un design épuré et professionnel.
 
-## 🎯 Composants
+### 🌙 Sombre
+Interface sombre pour un confort optimal, idéal pour les applications nocturnes.
+
+### ✨ Minimaliste
+Design épuré et fonctionnel, l'essentiel rien de plus.
+
+### 🌈 Coloré/Vibrant
+Sites e-commerce dynamiques avec des couleurs vives et attrayantes.
+
+### 🏢 Corporate
+Sites professionnels avec un style sérieux et crédible.
+
+### 🎭 Créatif
+Portfolios et sites artistiques avec des couleurs expressives.
+
+### 💻 Tech
+Startups et sites technologiques avec un style moderne et innovant.
+
+### 🎭 Vintage
+Sites rétro et classiques avec un charme nostalgique.
+
+### 🌿 Nature
+Sites écologiques avec des couleurs naturelles et apaisantes.
+
+### 💎 Luxe
+Sites premium et exclusifs avec un style sophistiqué.
+
+## 🚀 Composants Universels
 
 ### Boutons
 ```html
-<!-- Boutons de base -->
-<button class="btn btn-primary">Bouton principal</button>
-<button class="btn btn-secondary">Bouton secondaire</button>
+<button class="btn btn-primary">Principal</button>
+<button class="btn btn-secondary">Secondaire</button>
 <button class="btn btn-success">Succès</button>
 <button class="btn btn-danger">Danger</button>
-
-<!-- Boutons outline -->
-<button class="btn btn-outline-primary">Outline principal</button>
-
-<!-- Tailles -->
-<button class="btn btn-primary btn-sm">Petit</button>
-<button class="btn btn-primary btn-lg">Grand</button>
-
-<!-- Boutons avec icônes -->
-<button class="btn btn-primary btn-icon">
-  <i class="icon">★</i>
-</button>
-
-<!-- Boutons de chargement -->
-<button class="btn btn-primary btn-loading">Chargement...</button>
+<button class="btn btn-warning">Attention</button>
+<button class="btn btn-info">Information</button>
 ```
 
 ### Cartes
 ```html
 <div class="card">
-  <div class="card-header">
-    <h5 class="card-title">Titre de la carte</h5>
-  </div>
-  <div class="card-body">
-    <p class="card-text">Contenu de la carte</p>
-    <a href="#" class="btn btn-primary">Action</a>
-  </div>
-  <div class="card-footer">
-    Pied de carte
-  </div>
-</div>
-
-<!-- Cartes avec images -->
-<div class="card">
-  <img src="image.jpg" class="card-img-top" alt="Image">
-  <div class="card-body">
-    <h5 class="card-title">Titre</h5>
-    <p class="card-text">Description</p>
-  </div>
-</div>
-
-<!-- Cartes avec overlay -->
-<div class="card">
-  <img src="image.jpg" alt="Image">
-  <div class="card-img-overlay">
-    <h5 class="card-title">Titre sur image</h5>
-  </div>
-</div>
-```
-
-### Formulaires
-```html
-<div class="form-group">
-  <label class="form-label">Nom</label>
-  <input type="text" class="form-control" placeholder="Votre nom">
-  <div class="form-text">Aide pour le champ</div>
-</div>
-
-<div class="form-check">
-  <input type="checkbox" class="form-check-input" id="check">
-  <label class="form-check-label" for="check">Accepter les conditions</label>
+    <div class="card-header">
+        <h3>Titre de la carte</h3>
+    </div>
+    <div class="card-body">
+        <p>Contenu de la carte</p>
+        <button class="btn btn-primary">Action</button>
+    </div>
 </div>
 ```
 
 ### Alertes
 ```html
-<div class="alert alert-success">
-  Opération réussie !
-</div>
+<div class="alert alert-primary">Information</div>
+<div class="alert alert-success">Succès</div>
+<div class="alert alert-danger">Erreur</div>
+<div class="alert alert-warning">Attention</div>
+<div class="alert alert-info">Info</div>
+```
 
-<div class="alert alert-danger">
-  Une erreur s'est produite.
-</div>
+### Formulaires
+```html
+<form>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" class="form-control" placeholder="votre@email.com">
+    </div>
+    <button type="submit" class="btn btn-primary">Envoyer</button>
+</form>
 ```
 
 ### Badges
 ```html
 <span class="badge badge-primary">Nouveau</span>
-<span class="badge badge-success">Actif</span>
-<span class="badge badge-warning">En attente</span>
+<span class="badge badge-success">Validé</span>
+<span class="badge badge-danger">Urgent</span>
 ```
 
-### Navigation
+### Barres de progression
 ```html
-<!-- Navigation simple -->
-<ul class="nav">
-  <li class="nav-item">
-    <a class="nav-link active" href="#">Accueil</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">À propos</a>
-  </li>
-</ul>
-
-<!-- Onglets -->
-<ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a class="nav-link active" href="#">Onglet 1</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Onglet 2</a>
-  </li>
-</ul>
+<div class="progress">
+    <div class="progress-bar" style="width: 75%">75%</div>
+</div>
 ```
 
-### Navbar
+### Grille responsive
 ```html
-<nav class="navbar navbar-expand-lg">
-  <div class="container">
-    <a class="navbar-brand" href="#">Logo</a>
-    
-    <button class="navbar-toggler" type="button">
-      <span>☰</span>
-    </button>
-    
-    <div class="navbar-collapse">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Accueil</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
-        </li>
-      </ul>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4">
+            <!-- Contenu responsive -->
+        </div>
     </div>
-  </div>
-</nav>
+</div>
 ```
 
-## 🛠️ Utilitaires
+## 🎨 Personnalisation
 
-### Espacement
-```html
-<!-- Margin -->
-<div class="m-md">Marge moyenne</div>
-<div class="mt-lg">Marge top large</div>
-<div class="mb-sm">Marge bottom petite</div>
-
-<!-- Padding -->
-<div class="p-lg">Padding large</div>
-<div class="px-md">Padding horizontal moyen</div>
-<div class="py-sm">Padding vertical petit</div>
-```
-
-### Couleurs
-```html
-<!-- Couleurs de texte -->
-<p class="text-primary">Texte principal</p>
-<p class="text-success">Texte succès</p>
-
-<!-- Couleurs de fond -->
-<div class="bg-primary">Fond principal</div>
-<div class="bg-light">Fond clair</div>
-```
-
-### Bordures
-```html
-<div class="border">Bordure</div>
-<div class="border border-primary">Bordure colorée</div>
-<div class="rounded">Coins arrondis</div>
-<div class="rounded-lg">Coins très arrondis</div>
-```
-
-### Ombres
-```html
-<div class="shadow">Ombre normale</div>
-<div class="shadow-lg">Ombre large</div>
-<div class="shadow-none">Pas d'ombre</div>
-```
-
-### Typographie
-```html
-<p class="text-center">Texte centré</p>
-<p class="text-uppercase">TEXTE EN MAJUSCULES</p>
-<p class="font-weight-bold">Texte en gras</p>
-<p class="font-size-lg">Texte plus grand</p>
-```
-
-### Affichage
-```html
-<div class="d-flex">Flexbox</div>
-<div class="d-none">Caché</div>
-<div class="d-md-block">Visible sur tablette+</div>
-```
-
-## 🎭 Animations
-
-```html
-<!-- Animations d'apparition -->
-<div class="fade-in">Apparition en fondu</div>
-<div class="slide-in-up">Glissement vers le haut</div>
-<div class="scale-in">Agrandissement</div>
-
-<!-- Transitions -->
-<div class="transition">Transition normale</div>
-<div class="transition-fast">Transition rapide</div>
+### Créer son propre thème
+```css
+:root {
+    /* Couleurs personnalisées */
+    --primary-color: #votre-couleur;
+    --secondary-color: #votre-couleur;
+    --success-color: #votre-couleur;
+    --danger-color: #votre-couleur;
+    --warning-color: #votre-couleur;
+    --info-color: #votre-couleur;
+    
+    /* Typographie personnalisée */
+    --font-family-base: 'Votre Police', sans-serif;
+    --font-family-heading: 'Votre Police', serif;
+    
+    /* Espacements personnalisés */
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    
+    /* Bordures personnalisées */
+    --border-radius-md: 0.5rem;
+    --border-radius-lg: 1rem;
+}
 ```
 
 ## 📱 Responsive
 
-La bibliothèque utilise une approche mobile-first avec des breakpoints :
+Tous les composants sont automatiquement responsives :
+- **Mobile** : < 768px
+- **Tablet** : 768px - 1024px  
+- **Desktop** : > 1024px
 
-- **sm**: 576px (petits écrans)
-- **md**: 768px (tablettes)
-- **lg**: 992px (desktop)
-- **xl**: 1200px (grands écrans)
-- **xxl**: 1400px (très grands écrans)
+## 🎯 Avantages
 
-```html
-<!-- Classes responsive -->
-<div class="d-none d-md-block">Caché sur mobile, visible sur tablette+</div>
-<div class="col-12 col-md-6 col-lg-4">Grille responsive</div>
-<div class="text-center text-md-left">Centré sur mobile, aligné à gauche sur tablette+</div>
-```
+✅ **10 thèmes prédéfinis** pour tous les styles de sites  
+✅ **Changement de thème en 1 ligne** avec `data-theme`  
+✅ **Composants universels** qui s'adaptent automatiquement  
+✅ **Responsive par défaut** sur tous les écrans  
+✅ **Personnalisation facile** avec les variables CSS  
+✅ **Léger et performant**  
+✅ **Compatible tous navigateurs**  
 
-## 🎨 Personnalisation avancée
+## 📖 Documentation
 
-### Créer un thème personnalisé
-```css
-[data-theme="custom"] {
-  --primary-color: #ff6b6b;
-  --secondary-color: #4ecdc4;
-  --bg-primary: #f8f9fa;
-  --text-primary: #2c3e50;
-  --border-radius: 12px;
-  --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-```
-
-### Variables disponibles
-```css
-/* Couleurs */
---primary-color, --secondary-color, --success-color, --danger-color
---warning-color, --info-color, --light-color, --dark-color
-
-/* Typographie */
---font-family-base, --font-size-base, --font-weight-normal
---line-height-base
-
-/* Espacement */
---spacing-xs, --spacing-sm, --spacing-md, --spacing-lg, --spacing-xl
-
-/* Bordures */
---border-radius, --border-width, --border-color
-
-/* Ombres */
---shadow-sm, --shadow, --shadow-md, --shadow-lg, --shadow-xl
-
-/* Transitions */
---transition-fast, --transition-base, --transition-slow
-```
-
-## 🔧 Build
-
-Pour compiler la bibliothèque :
-
-```bash
-# Installer les dépendances
-npm install
-
-# Build de développement
-npm run dev
-
-# Build de production
-npm run build
-
-# Lancer la documentation
-npm run docs
-```
-
-## 📄 Licence
-
-MIT License - voir le fichier LICENSE pour plus de détails.
+- [Guide d'utilisation complet](USAGE.md)
+- [Démonstration interactive](demo-themes.html)
+- [GitHub Repository](https://github.com/Psychopathie68/flexible-css-librar)
 
 ## 🤝 Contribution
 
 Les contributions sont les bienvenues ! N'hésitez pas à :
+- 🐛 Signaler un bug
+- 💡 Proposer une fonctionnalité
+- 📝 Améliorer la documentation
+- 🎨 Ajouter de nouveaux thèmes
 
-1. Fork le projet
-2. Créer une branche pour votre fonctionnalité
-3. Commiter vos changements
-4. Pousser vers la branche
-5. Ouvrir une Pull Request
+## 📄 Licence
 
-## 📞 Support
+MIT License - voir le fichier [LICENSE](LICENSE) pour plus de détails.
 
-Pour toute question ou problème :
+## 🙏 Remerciements
 
-- Ouvrez une issue sur GitHub
-- Consultez la documentation en ligne
-- Contactez-nous via email
+Merci à tous les contributeurs qui ont participé à ce projet !
 
 ---
 
-**Flexible CSS Library** - Une bibliothèque CSS moderne et flexible pour tous vos projets web ! 🎨 
+**Cette bibliothèque s'adapte à TOUS vos besoins !** 🎨✨ 

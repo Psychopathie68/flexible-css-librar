@@ -1,22 +1,41 @@
 {
   "name": "flexible-css-library",
   "version": "1.0.0",
-  "description": "Une bibliothèque CSS flexible et configurable pour tous types de sites web",
-  "main": "dist/flexible-css.min.css",
+  "description": "Une bibliothèque CSS ultra-flexible avec 10 thèmes prédéfinis pour tous les styles de sites web",
+  "main": "dist/flexible-css.css",
+  "files": [
+    "dist/",
+    "src/",
+    "README.md",
+    "USAGE.md"
+  ],
   "scripts": {
     "build": "sass src/main.scss:dist/flexible-css.css --style compressed",
     "dev": "sass src/main.scss:dist/flexible-css.css --watch",
-    "docs": "live-server docs --port=3000"
+    "docs": "live-server docs --port=3000",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "css",
     "library",
     "framework",
     "responsive",
-    "flexible"
+    "flexible",
+    "themes",
+    "bootstrap-alternative",
+    "ui-components",
+    "design-system"
   ],
-  "author": "Votre Nom",
+  "author": "Psychopathie68",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Psychopathie68/flexible-css-librar.git"
+  },
+  "homepage": "https://github.com/Psychopathie68/flexible-css-librar#readme",
+  "bugs": {
+    "url": "https://github.com/Psychopathie68/flexible-css-librar/issues"
+  },
   "devDependencies": {
     "live-server": "^1.2.2",
     "sass": "^1.89.2"

@@ -1,0 +1,34 @@
+# Fichiers de développement
+node_modules/
+.git/
+.gitignore
+.npmignore
+
+# Fichiers de build temporaires
+*.log
+*.tmp
+
+# Fichiers de documentation de développement
+docs/
+*.md
+!README.md
+!USAGE.md
+
+# Fichiers de test
+test/
+tests/
+*.test.js
+*.spec.js
+
+# Fichiers de configuration
+.eslintrc
+.prettierrc
+.babelrc
+webpack.config.js
+
+# Fichiers de démonstration
+demo-themes.html
+
+# Fichiers système
+.DS_Store
+Thumbs.db 
