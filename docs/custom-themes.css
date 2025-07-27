@@ -1,0 +1,241 @@
+/* ========================================
+   THÈMES PERSONNALISÉS - FLEXIBLE CSS LIBRARY
+   ======================================== */
+
+/* Thème "Ocean" - Couleurs bleues et vertes */
+[data-theme="ocean"] {
+  --primary-color: #0066cc;
+  --secondary-color: #00cc99;
+  --success-color: #00aa66;
+  --danger-color: #cc3300;
+  --warning-color: #ffaa00;
+  --info-color: #0099cc;
+  --light-color: #f0f8ff;
+  --dark-color: #003366;
+  
+  --bg-primary: #ffffff;
+  --bg-secondary: #f0f8ff;
+  --text-primary: #003366;
+  --text-secondary: #0066cc;
+  
+  --border-radius: 8px;
+  --shadow: 0 2px 10px rgba(0, 102, 204, 0.1);
+}
+
+/* Thème "Sunset" - Couleurs chaudes */
+[data-theme="sunset"] {
+  --primary-color: #ff6b35;
+  --secondary-color: #f7931e;
+  --success-color: #4caf50;
+  --danger-color: #f44336;
+  --warning-color: #ff9800;
+  --info-color: #2196f3;
+  --light-color: #fff8e1;
+  --dark-color: #8d6e63;
+  
+  --bg-primary: #ffffff;
+  --bg-secondary: #fff8e1;
+  --text-primary: #5d4037;
+  --text-secondary: #8d6e63;
+  
+  --border-radius: 12px;
+  --shadow: 0 4px 20px rgba(255, 107, 53, 0.15);
+}
+
+/* Thème "Forest" - Couleurs naturelles */
+[data-theme="forest"] {
+  --primary-color: #2e7d32;
+  --secondary-color: #388e3c;
+  --success-color: #4caf50;
+  --danger-color: #d32f2f;
+  --warning-color: #f57c00;
+  --info-color: #1976d2;
+  --light-color: #f1f8e9;
+  --dark-color: #1b5e20;
+  
+  --bg-primary: #ffffff;
+  --bg-secondary: #f1f8e9;
+  --text-primary: #2e7d32;
+  --text-secondary: #388e3c;
+  
+  --border-radius: 6px;
+  --shadow: 0 2px 8px rgba(46, 125, 50, 0.1);
+}
+
+/* Thème "Neon" - Couleurs vives */
+[data-theme="neon"] {
+  --primary-color: #ff00ff;
+  --secondary-color: #00ffff;
+  --success-color: #00ff00;
+  --danger-color: #ff0000;
+  --warning-color: #ffff00;
+  --info-color: #0080ff;
+  --light-color: #f0f0f0;
+  --dark-color: #000000;
+  
+  --bg-primary: #000000;
+  --bg-secondary: #1a1a1a;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  
+  --border-radius: 0;
+  --shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+}
+
+/* Thème "Corporate" - Couleurs professionnelles */
+[data-theme="corporate"] {
+  --primary-color: #1a237e;
+  --secondary-color: #424242;
+  --success-color: #2e7d32;
+  --danger-color: #c62828;
+  --warning-color: #f57f17;
+  --info-color: #0277bd;
+  --light-color: #fafafa;
+  --dark-color: #212121;
+  
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --text-primary: #212121;
+  --text-secondary: #757575;
+  
+  --border-radius: 4px;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+/* Thème "Pastel" - Couleurs douces */
+[data-theme="pastel"] {
+  --primary-color: #ffb3d9;
+  --secondary-color: #b3d9ff;
+  --success-color: #b3ffb3;
+  --danger-color: #ffb3b3;
+  --warning-color: #ffffb3;
+  --info-color: #b3e6ff;
+  --light-color: #fefefe;
+  --dark-color: #d9d9d9;
+  
+  --bg-primary: #ffffff;
+  --bg-secondary: #fefefe;
+  --text-primary: #666666;
+  --text-secondary: #999999;
+  
+  --border-radius: 20px;
+  --shadow: 0 2px 15px rgba(255, 179, 217, 0.2);
+}
+
+/* Thème "Retro" - Couleurs vintage */
+[data-theme="retro"] {
+  --primary-color: #8b4513;
+  --secondary-color: #daa520;
+  --success-color: #228b22;
+  --danger-color: #b22222;
+  --warning-color: #ff8c00;
+  --info-color: #4169e1;
+  --light-color: #f5deb3;
+  --dark-color: #654321;
+  
+  --bg-primary: #faf0e6;
+  --bg-secondary: #f5deb3;
+  --text-primary: #654321;
+  --text-secondary: #8b4513;
+  
+  --border-radius: 0;
+  --shadow: 0 4px 8px rgba(139, 69, 19, 0.2);
+}
+
+/* Thème "Tech" - Couleurs futuristes */
+[data-theme="tech"] {
+  --primary-color: #00d4ff;
+  --secondary-color: #7b68ee;
+  --success-color: #00ff88;
+  --danger-color: #ff0055;
+  --warning-color: #ffaa00;
+  --info-color: #0099ff;
+  --light-color: #f0f0f0;
+  --dark-color: #1a1a2e;
+  
+  --bg-primary: #16213e;
+  --bg-secondary: #0f3460;
+  --text-primary: #e94560;
+  --text-secondary: #00d4ff;
+  
+  --border-radius: 8px;
+  --shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+}
+
+/* Thème "Elegant" - Couleurs sophistiquées */
+[data-theme="elegant"] {
+  --primary-color: #2c3e50;
+  --secondary-color: #34495e;
+  --success-color: #27ae60;
+  --danger-color: #e74c3c;
+  --warning-color: #f39c12;
+  --info-color: #3498db;
+  --light-color: #ecf0f1;
+  --dark-color: #1a252f;
+  
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #2c3e50;
+  --text-secondary: #7f8c8d;
+  
+  --border-radius: 6px;
+  --shadow: 0 2px 10px rgba(44, 62, 80, 0.1);
+}
+
+/* Thème "Playful" - Couleurs amusantes */
+[data-theme="playful"] {
+  --primary-color: #ff6b9d;
+  --secondary-color: #4ecdc4;
+  --success-color: #45b7d1;
+  --danger-color: #ffa07a;
+  --warning-color: #ffd93d;
+  --info-color: #6c5ce7;
+  --light-color: #ffeaa7;
+  --dark-color: #2d3436;
+  
+  --bg-primary: #ffffff;
+  --bg-secondary: #ffeaa7;
+  --text-primary: #2d3436;
+  --text-secondary: #636e72;
+  
+  --border-radius: 25px;
+  --shadow: 0 8px 25px rgba(255, 107, 157, 0.2);
+}
+
+/* ========================================
+   UTILISATION DES THÈMES
+   ======================================== */
+
+/* Pour utiliser un thème, ajoutez l'attribut data-theme à l'élément html */
+
+/* Exemple d'utilisation :
+<html data-theme="ocean">
+  <head>
+    <link rel="stylesheet" href="flexible-css.css">
+    <link rel="stylesheet" href="custom-themes.css">
+  </head>
+  <body>
+    <!-- Votre contenu -->
+  </body>
+</html>
+*/
+
+/* ========================================
+   CHANGEMENT DYNAMIQUE DE THÈME
+   ======================================== */
+
+/* JavaScript pour changer de thème dynamiquement */
+/*
+function changeTheme(themeName) {
+  if (themeName) {
+    document.documentElement.setAttribute('data-theme', themeName);
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+  }
+}
+
+// Exemple d'utilisation :
+// changeTheme('ocean');
+// changeTheme('sunset');
+// changeTheme(''); // Retour au thème par défaut
+*/ 

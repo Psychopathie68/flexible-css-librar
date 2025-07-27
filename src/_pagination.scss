@@ -1,0 +1,130 @@
+// ========================================
+// COMPOSANT PAGINATION
+// ========================================
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: var(--spacing-md) 0;
+  gap: var(--spacing-xs);
+}
+
+.pagination-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  transition: all var(--transition-base);
+  cursor: pointer;
+  
+  &:hover {
+    background: var(--bg-secondary);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+  }
+  
+  &.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    font-weight: var(--font-weight-bold);
+    pointer-events: none;
+  }
+  
+  &.disabled {
+    background: var(--bg-secondary);
+    border-color: var(--border-light);
+    color: var(--text-muted);
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.6;
+  }
+}
+
+// Navigation (précédent/suivant)
+.pagination-prev,
+.pagination-next {
+  padding: 0 var(--spacing-sm);
+  
+  &::before,
+  &::after {
+    content: "‹";
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+}
+
+.pagination-next::after {
+  content: "›";
+}
+
+// Tailles
+.pagination-sm .pagination-item {
+  min-width: 2rem;
+  height: 2rem;
+  font-size: var(--font-size-xs);
+}
+
+.pagination-lg .pagination-item {
+  min-width: 3rem;
+  height: 3rem;
+  font-size: var(--font-size-base);
+}
+
+// Pagination avec ellipsis
+.pagination-ellipsis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  color: var(--text-muted);
+  font-weight: var(--font-weight-bold);
+  pointer-events: none;
+}
+
+// Pagination centrée
+.pagination-centered {
+  justify-content: center;
+}
+
+// Pagination à droite
+.pagination-right {
+  justify-content: flex-end;
+}
+
+// Pagination responsive
+@media (max-width: var(--breakpoint-md)) {
+  .pagination {
+    gap: 0.1rem;
+  }
+  
+  .pagination-item {
+    min-width: 2rem;
+    height: 2rem;
+    font-size: var(--font-size-xs);
+  }
+  
+  .pagination-prev,
+  .pagination-next {
+    padding: 0 var(--spacing-xs);
+  }
+} 

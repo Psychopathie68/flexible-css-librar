@@ -1,0 +1,97 @@
+// ========================================
+// COMPOSANT BARRE DE PROGRESSION (PROGRESS BAR)
+// ========================================
+
+.progress {
+  width: 100%;
+  height: 1.25rem;
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius-full);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--spacing-md);
+  position: relative;
+}
+
+.progress-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  transition: width var(--transition-base), background-color var(--transition-base);
+  width: 0;
+  min-width: 2rem;
+  border-radius: var(--border-radius-full);
+}
+
+// Variantes de couleur
+.progress-bar-primary   { background-color: var(--primary-color); }
+.progress-bar-secondary { background-color: var(--secondary-color); }
+.progress-bar-success   { background-color: var(--success-color); }
+.progress-bar-danger    { background-color: var(--danger-color); }
+.progress-bar-warning   { background-color: var(--warning-color); color: var(--text-primary); }
+.progress-bar-info      { background-color: var(--info-color); }
+.progress-bar-light     { background-color: var(--light-color); color: var(--text-primary); }
+.progress-bar-dark      { background-color: var(--dark-color); }
+
+// Barre animée
+.progress-bar-animated {
+  animation: progressBarStripes 1s linear infinite;
+  background-image: linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
+  background-size: 1.5rem 1.5rem;
+}
+
+@keyframes progressBarStripes {
+  0% { background-position-x: 0; }
+  100% { background-position-x: 1.5rem; }
+}
+
+// Barre rayée
+.progress-bar-striped {
+  background-image: linear-gradient(45deg, rgba(255,255,255,0.25) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.25) 50%, rgba(255,255,255,0.25) 75%, transparent 75%, transparent);
+  background-size: 1.5rem 1.5rem;
+}
+
+// Barre fine
+.progress-sm {
+  height: 0.5rem;
+}
+
+// Barre large
+.progress-lg {
+  height: 2rem;
+}
+
+// Barre de progression multiple
+.progress-bar + .progress-bar {
+  margin-left: 2px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+// Accessibilité
+.progress[aria-valuenow] {
+  position: relative;
+}
+
+.progress-bar[aria-label]::after {
+  content: attr(aria-label);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  pointer-events: none;
+}
+
+// Responsive
+@media (max-width: var(--breakpoint-md)) {
+  .progress { height: 1rem; }
+  .progress-lg { height: 1.25rem; }
+} 

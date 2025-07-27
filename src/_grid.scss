@@ -1,0 +1,222 @@
+@use 'sass:math';
+
+// ========================================
+// SYSTÈME DE GRILLE RESPONSIVE
+// ========================================
+
+// Container
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
+  
+  @media (min-width: var(--breakpoint-sm)) {
+    max-width: var(--container-sm);
+  }
+  
+  @media (min-width: var(--breakpoint-md)) {
+    max-width: var(--container-md);
+  }
+  
+  @media (min-width: var(--breakpoint-lg)) {
+    max-width: var(--container-lg);
+  }
+  
+  @media (min-width: var(--breakpoint-xl)) {
+    max-width: var(--container-xl);
+  }
+  
+  @media (min-width: var(--breakpoint-2xl)) {
+    max-width: var(--container-2xl);
+  }
+}
+
+.container-fluid {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
+}
+
+// Row
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--spacing-md) / 2);
+  margin-right: calc(-1 * var(--spacing-md) / 2);
+  
+  & > * {
+    padding: 0 var(--spacing-sm);
+  }
+}
+
+// Colonnes
+.col {
+  flex: 1 0 0%;
+  min-width: 0;
+}
+
+// Colonnes avec tailles spécifiques
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    flex: 0 0 auto;
+    width: math.percentage(math.div($i, 12));
+  }
+}
+
+// Colonnes auto
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+// Responsive breakpoints
+@each $breakpoint, $value in (
+  sm: var(--breakpoint-sm),
+  md: var(--breakpoint-md),
+  lg: var(--breakpoint-lg),
+  xl: var(--breakpoint-xl),
+  xxl: var(--breakpoint-2xl)
+) {
+  @media (min-width: #{$value}) {
+    .col-#{$breakpoint} {
+      flex: 1 0 0%;
+    }
+    
+    .col-#{$breakpoint}-auto {
+      flex: 0 0 auto;
+      width: auto;
+    }
+    
+    @for $i from 1 through 12 {
+      .col-#{$breakpoint}-#{$i} {
+        flex: 0 0 auto;
+        width: math.percentage(math.div($i, 12));
+      }
+    }
+  }
+}
+
+// Alignement des colonnes
+.row-start {
+  justify-content: flex-start;
+}
+
+.row-center {
+  justify-content: center;
+}
+
+.row-end {
+  justify-content: flex-end;
+}
+
+.row-between {
+  justify-content: space-between;
+}
+
+.row-around {
+  justify-content: space-around;
+}
+
+.row-evenly {
+  justify-content: space-evenly;
+}
+
+// Alignement vertical
+.row-top {
+  align-items: flex-start;
+}
+
+.row-middle {
+  align-items: center;
+}
+
+.row-bottom {
+  align-items: flex-end;
+}
+
+.row-stretch {
+  align-items: stretch;
+}
+
+// Espacement entre les colonnes
+.row-gap {
+  &-xs { gap: var(--spacing-xs); }
+  &-sm { gap: var(--spacing-sm); }
+  &-md { gap: var(--spacing-md); }
+  &-lg { gap: var(--spacing-lg); }
+  &-xl { gap: var(--spacing-xl); }
+}
+
+// Utilitaires de grille
+.d-flex {
+  display: flex;
+}
+
+.d-inline-flex {
+  display: inline-flex;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.d-none {
+  display: none;
+}
+
+// Responsive display
+@each $breakpoint, $value in (
+  sm: var(--breakpoint-sm),
+  md: var(--breakpoint-md),
+  lg: var(--breakpoint-lg),
+  xl: var(--breakpoint-xl),
+  xxl: var(--breakpoint-2xl)
+) {
+  @media (min-width: #{$value}) {
+    .d-#{$breakpoint}-flex { display: flex; }
+    .d-#{$breakpoint}-inline-flex { display: inline-flex; }
+    .d-#{$breakpoint}-block { display: block; }
+    .d-#{$breakpoint}-inline-block { display: inline-block; }
+    .d-#{$breakpoint}-none { display: none; }
+  }
+}
+
+// Flex utilities
+.flex-row { flex-direction: row; }
+.flex-column { flex-direction: column; }
+.flex-row-reverse { flex-direction: row-reverse; }
+.flex-column-reverse { flex-direction: column-reverse; }
+
+.flex-wrap { flex-wrap: wrap; }
+.flex-nowrap { flex-wrap: nowrap; }
+.flex-wrap-reverse { flex-wrap: wrap-reverse; }
+
+.flex-fill { flex: 1 1 auto; }
+.flex-grow-0 { flex-grow: 0; }
+.flex-grow-1 { flex-grow: 1; }
+.flex-shrink-0 { flex-shrink: 0; }
+.flex-shrink-1 { flex-shrink: 1; }
+
+// Responsive flex
+@each $breakpoint, $value in (
+  sm: var(--breakpoint-sm),
+  md: var(--breakpoint-md),
+  lg: var(--breakpoint-lg),
+  xl: var(--breakpoint-xl),
+  xxl: var(--breakpoint-2xl)
+) {
+  @media (min-width: #{$value}) {
+    .flex-#{$breakpoint}-row { flex-direction: row; }
+    .flex-#{$breakpoint}-column { flex-direction: column; }
+    .flex-#{$breakpoint}-wrap { flex-wrap: wrap; }
+    .flex-#{$breakpoint}-nowrap { flex-wrap: nowrap; }
+  }
+} 

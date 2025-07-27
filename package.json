@@ -1,0 +1,24 @@
+{
+  "name": "flexible-css-library",
+  "version": "1.0.0",
+  "description": "Une bibliothèque CSS flexible et configurable pour tous types de sites web",
+  "main": "dist/flexible-css.min.css",
+  "scripts": {
+    "build": "sass src/main.scss:dist/flexible-css.css --style compressed",
+    "dev": "sass src/main.scss:dist/flexible-css.css --watch",
+    "docs": "live-server docs --port=3000"
+  },
+  "keywords": [
+    "css",
+    "library",
+    "framework",
+    "responsive",
+    "flexible"
+  ],
+  "author": "Votre Nom",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "sass": "^1.89.2"
+  }
+}

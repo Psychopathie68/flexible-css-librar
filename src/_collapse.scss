@@ -1,0 +1,190 @@
+// ========================================
+// COMPOSANT COLLAPSE (ACCORDÉON)
+// ========================================
+
+.collapse {
+  overflow: hidden;
+  transition: height var(--transition-base);
+  
+  &.collapsing {
+    height: 0;
+    overflow: hidden;
+  }
+  
+  &.show {
+    height: auto;
+  }
+}
+
+.collapse-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--spacing-md);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  color: var(--text-primary);
+  text-align: left;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  
+  &:hover {
+    background: var(--bg-secondary);
+    border-color: var(--primary-color);
+  }
+  
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+  }
+  
+  &.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+  }
+}
+
+.collapse-icon {
+  width: 1.2em;
+  height: 1.2em;
+  transition: transform var(--transition-base);
+  
+  .collapse-header.active & {
+    transform: rotate(180deg);
+  }
+}
+
+.collapse-content {
+  padding: var(--spacing-md);
+  border: 1px solid var(--border-color);
+  border-top: none;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+// Accordéon
+.accordion {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.accordion-item {
+  border-bottom: 1px solid var(--border-color);
+  
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--spacing-md);
+  background: var(--bg-primary);
+  border: none;
+  color: var(--text-primary);
+  text-align: left;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  
+  &:hover {
+    background: var(--bg-secondary);
+  }
+  
+  &:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 2px var(--primary-color);
+  }
+  
+  &.active {
+    background: var(--primary-color);
+    color: white;
+  }
+}
+
+.accordion-icon {
+  width: 1.2em;
+  height: 1.2em;
+  transition: transform var(--transition-base);
+  
+  .accordion-header.active & {
+    transform: rotate(180deg);
+  }
+}
+
+.accordion-content {
+  padding: var(--spacing-md);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border-top: 1px solid var(--border-color);
+}
+
+// Collapse avec couleurs
+.collapse-primary .collapse-header.active {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.collapse-success .collapse-header.active {
+  background: var(--success-color);
+  border-color: var(--success-color);
+}
+
+.collapse-danger .collapse-header.active {
+  background: var(--danger-color);
+  border-color: var(--danger-color);
+}
+
+.collapse-warning .collapse-header.active {
+  background: var(--warning-color);
+  border-color: var(--warning-color);
+  color: var(--dark-color);
+}
+
+.collapse-info .collapse-header.active {
+  background: var(--info-color);
+  border-color: var(--info-color);
+}
+
+// Collapse flush (sans bordures)
+.collapse-flush {
+  border: none;
+  border-radius: 0;
+  
+  .collapse-header {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .collapse-content {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+}
+
+// Collapse responsive
+@media (max-width: var(--breakpoint-md)) {
+  .collapse-header,
+  .accordion-header {
+    padding: var(--spacing-sm);
+    font-size: var(--font-size-sm);
+  }
+  
+  .collapse-content,
+  .accordion-content {
+    padding: var(--spacing-sm);
+  }
+} 

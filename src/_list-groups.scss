@@ -1,0 +1,188 @@
+// ========================================
+// COMPOSANT LIST GROUPS
+// ========================================
+
+.list-group {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background: var(--bg-primary);
+  overflow: hidden;
+}
+
+.list-group-item {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: all var(--transition-base);
+  
+  &:last-child {
+    border-bottom: none;
+  }
+  
+  &:hover {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    text-decoration: none;
+  }
+  
+  &:focus {
+    outline: none;
+    background: var(--bg-secondary);
+    box-shadow: inset 0 0 0 2px var(--primary-color);
+  }
+  
+  &.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    font-weight: var(--font-weight-bold);
+  }
+  
+  &.disabled {
+    background: var(--bg-secondary);
+    color: var(--text-muted);
+    cursor: not-allowed;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+}
+
+// List group avec actions
+.list-group-action {
+  cursor: pointer;
+  
+  &:hover {
+    transform: translateX(2px);
+  }
+}
+
+// List group avec badges
+.list-group-item-badge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+}
+
+.list-group-badge {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  border-radius: var(--border-radius);
+  background: var(--primary-color);
+  color: white;
+}
+
+// List group avec icônes
+.list-group-item-icon {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  
+  .list-group-icon {
+    width: 1.2em;
+    height: 1.2em;
+    color: var(--text-muted);
+  }
+}
+
+// List group avec images
+.list-group-item-image {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  
+  .list-group-image {
+    width: 3rem;
+    height: 3rem;
+    border-radius: var(--border-radius);
+    object-fit: cover;
+  }
+}
+
+// List group flush (sans bordures)
+.list-group-flush {
+  border: none;
+  border-radius: 0;
+  
+  .list-group-item {
+    border: none;
+    border-radius: 0;
+  }
+}
+
+// List group horizontale
+.list-group-horizontal {
+  flex-direction: row;
+  
+  .list-group-item {
+    border-right: 1px solid var(--border-color);
+    border-bottom: none;
+    
+    &:last-child {
+      border-right: none;
+    }
+  }
+  
+  @media (max-width: var(--breakpoint-md)) {
+    flex-direction: column;
+    
+    .list-group-item {
+      border-right: none;
+      border-bottom: 1px solid var(--border-color);
+      
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+// List group avec couleurs
+.list-group-item-primary {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.list-group-item-success {
+  background: var(--success-color);
+  color: white;
+  border-color: var(--success-color);
+}
+
+.list-group-item-danger {
+  background: var(--danger-color);
+  color: white;
+  border-color: var(--danger-color);
+}
+
+.list-group-item-warning {
+  background: var(--warning-color);
+  color: var(--dark-color);
+  border-color: var(--warning-color);
+}
+
+.list-group-item-info {
+  background: var(--info-color);
+  color: white;
+  border-color: var(--info-color);
+}
+
+// List group responsive
+@media (max-width: var(--breakpoint-md)) {
+  .list-group-item {
+    padding: var(--spacing-sm);
+  }
+  
+  .list-group-item-image .list-group-image {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+} 

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemples - Flexible CSS Library</title>
+    <link rel="stylesheet" href="../dist/flexible-css.css">
+    <link rel="stylesheet" href="flexible-css.css">
+    <link rel="stylesheet" href="custom-themes.css">
+    <style>
+        .example-section {
+            margin-bottom: var(--spacing-2xl);
+            padding: var(--spacing-lg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+        }
+        
+        .example-title {
+            margin-bottom: var(--spacing-md);
+            color: var(--primary-color);
+            font-size: var(--font-size-xl);
+        }
+        
+        .theme-selector {
+            margin-bottom: var(--spacing-lg);
+            padding: var(--spacing-md);
+            background: var(--bg-secondary);
+            border-radius: var(--border-radius);
+        }
+        
+        .theme-buttons {
+            display: flex;
+            gap: var(--spacing-sm);
+            flex-wrap: wrap;
+        }
+        
+        .theme-btn {
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-sm);
+            background: var(--bg-primary);
+            cursor: pointer;
+            font-size: var(--font-size-sm);
+            transition: all var(--transition-fast);
+        }
+        
+        .theme-btn:hover {
+            background: var(--primary-color);
+            color: var(--text-light);
+        }
+        
+        .theme-btn.active {
+            background: var(--primary-color);
+            color: var(--text-light);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-xl">Exemples pratiques - Flexible CSS Library</h1>
+        
+        <!-- Sélecteur de thème -->
+        <div class="theme-selector">
+            <h3>Choisir un thème :</h3>
+            <div class="theme-buttons">
+                <button class="theme-btn active" onclick="changeTheme('')">Défaut</button>
+                <button class="theme-btn" onclick="changeTheme('dark')">Sombre</button>
+                <button class="theme-btn" onclick="changeTheme('minimal')">Minimal</button>
+                <button class="theme-btn" onclick="changeTheme('colorful')">Coloré</button>
+                <button class="theme-btn" onclick="changeTheme('ocean')">Ocean</button>
+                <button class="theme-btn" onclick="changeTheme('sunset')">Sunset</button>
+                <button class="theme-btn" onclick="changeTheme('forest')">Forest</button>
+                <button class="theme-btn" onclick="changeTheme('neon')">Neon</button>
+                <button class="theme-btn" onclick="changeTheme('corporate')">Corporate</button>
+                <button class="theme-btn" onclick="changeTheme('pastel')">Pastel</button>
+                <button class="theme-btn" onclick="changeTheme('retro')">Retro</button>
+                <button class="theme-btn" onclick="changeTheme('tech')">Tech</button>
+                <button class="theme-btn" onclick="changeTheme('elegant')">Elegant</button>
+                <button class="theme-btn" onclick="changeTheme('playful')">Playful</button>
+            </div>
+        </div>
+        
+        <!-- Exemple 1: Page d'accueil -->
+        <div class="example-section">
+            <h2 class="example-title">Exemple 1: Page d'accueil</h2>
+            
+            <nav class="navbar">
+                <div class="container">
+                    <a class="navbar-brand" href="#">MonSite</a>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <div class="container mt-lg">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h1>Bienvenue sur notre site</h1>
+                        <p class="font-size-lg">Découvrez nos services exceptionnels et notre expertise dans le domaine.</p>
+                        <div class="d-flex gap-sm">
+                            <button class="btn btn-primary btn-lg">En savoir plus</button>
+                            <button class="btn btn-outline-primary btn-lg">Nos services</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Newsletter</h5>
+                                <p class="card-text">Restez informé de nos dernières actualités.</p>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Votre email">
+                                </div>
+                                <button class="btn btn-primary btn-block">S'abonner</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Exemple 2: Galerie de produits -->
+        <div class="example-section">
+            <h2 class="example-title">Exemple 2: Galerie de produits</h2>
+            
+            <div class="container">
+                <h3 class="text-center mb-lg">Nos produits vedettes</h3>
+                <div class="row">
+                    <div class="col-md-4 mb-md">
+                        <div class="card card-actionable">
+                            <div class="card-body text-center">
+                                <div class="bg-primary text-white p-lg rounded-full mb-md" style="width: 80px; height: 80px; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 2rem;">📱</div>
+                                <h5 class="card-title">Produit Premium</h5>
+                                <p class="card-text">Description du produit avec des détails intéressants.</p>
+                                <div class="d-flex gap-sm justify-content-center">
+                                    <span class="badge badge-success">Nouveau</span>
+                                    <span class="badge badge-primary">Populaire</span>
+                                </div>
+                                <button class="btn btn-primary mt-md">Acheter maintenant</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-md">
+                        <div class="card card-actionable">
+                            <div class="card-body text-center">
+                                <div class="bg-secondary text-white p-lg rounded-full mb-md" style="width: 80px; height: 80px; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 2rem;">💻</div>
+                                <h5 class="card-title">Service Pro</h5>
+                                <p class="card-text">Service professionnel pour entreprises.</p>
+                                <div class="d-flex gap-sm justify-content-center">
+                                    <span class="badge badge-info">Pro</span>
+                                </div>
+                                <button class="btn btn-secondary mt-md">Découvrir</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-md">
+                        <div class="card card-actionable">
+                            <div class="card-body text-center">
+                                <div class="bg-success text-white p-lg rounded-full mb-md" style="width: 80px; height: 80px; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 2rem;">🚀</div>
+                                <h5 class="card-title">Solution Avancée</h5>
+                                <p class="card-text">Solution complète pour vos besoins.</p>
+                                <div class="d-flex gap-sm justify-content-center">
+                                    <span class="badge badge-warning">Bestseller</span>
+                                </div>
+                                <button class="btn btn-success mt-md">Essayer gratuitement</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Exemple 3: Formulaire de contact -->
+        <div class="example-section">
+            <h2 class="example-title">Exemple 3: Formulaire de contact</h2>
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3>Contactez-nous</h3>
+                        <p>Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.</p>
+                        
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Prénom</label>
+                                        <input type="text" class="form-control" placeholder="Votre prénom">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Nom</label>
+                                        <input type="text" class="form-control" placeholder="Votre nom">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" placeholder="votre@email.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Sujet</label>
+                                <select class="form-control">
+                                    <option>Choisir un sujet</option>
+                                    <option>Demande de devis</option>
+                                    <option>Support technique</option>
+                                    <option>Partenariat</option>
+                                    <option>Autre</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Message</label>
+                                <textarea class="form-control" rows="5" placeholder="Votre message..."></textarea>
+                            </div>
+                            
+                            <div class="form-check mb-md">
+                                <input type="checkbox" class="form-check-input" id="newsletter">
+                                <label class="form-check-label" for="newsletter">
+                                    Je souhaite recevoir la newsletter
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-lg">Envoyer le message</button>
+                        </form>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Informations de contact</h5>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Adresse :</strong><br>123 Rue de la Paix<br>75001 Paris, France</p>
+                                <p><strong>Téléphone :</strong><br>+33 1 23 45 67 89</p>
+                                <p><strong>Email :</strong><br>contact@monsite.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="alert alert-info mt-md">
+                            <strong>Horaires d'ouverture :</strong><br>
+                            Lundi - Vendredi : 9h - 18h<br>
+                            Samedi : 10h - 16h<br>
+                            Dimanche : Fermé
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Exemple 4: Dashboard -->
+        <div class="example-section">
+            <h2 class="example-title">Exemple 4: Dashboard</h2>
+            
+            <div class="container">
+                <div class="row mb-lg">
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h4 class="text-primary">1,234</h4>
+                                <p class="card-text">Utilisateurs actifs</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h4 class="text-success">€45,678</h4>
+                                <p class="card-text">Revenus du mois</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h4 class="text-warning">89%</h4>
+                                <p class="card-text">Taux de satisfaction</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h4 class="text-info">567</h4>
+                                <p class="card-text">Nouveaux clients</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Activité récente</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert alert-success">
+                                    <strong>Nouveau client</strong> - Jean Dupont a souscrit au plan Premium
+                                </div>
+                                <div class="alert alert-info">
+                                    <strong>Mise à jour</strong> - Version 2.1 déployée avec succès
+                                </div>
+                                <div class="alert alert-warning">
+                                    <strong>Maintenance</strong> - Maintenance prévue le 15/12 à 2h du matin
+                                </div>
+                                <div class="alert alert-success">
+                                    <strong>Objectif atteint</strong> - 1000 utilisateurs actifs dépassés !
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Actions rapides</h5>
+                            </div>
+                            <div class="card-body">
+                                <button class="btn btn-primary btn-block mb-sm">Ajouter un utilisateur</button>
+                                <button class="btn btn-secondary btn-block mb-sm">Générer un rapport</button>
+                                <button class="btn btn-success btn-block mb-sm">Envoyer une notification</button>
+                                <button class="btn btn-info btn-block">Paramètres</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Exemple 5: Blog -->
+        <div class="example-section">
+            <h2 class="example-title">Exemple 5: Blog</h2>
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <article class="card mb-lg">
+                            <div class="card-body">
+                                <div class="d-flex gap-sm mb-md">
+                                    <span class="badge badge-primary">Technologie</span>
+                                    <span class="badge badge-secondary">Web Design</span>
+                                </div>
+                                <h2>Les tendances du web design en 2024</h2>
+                                <p class="text-muted">Publié le 15 décembre 2024 par Admin</p>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <button class="btn btn-outline-primary">Lire la suite</button>
+                            </div>
+                        </article>
+                        
+                        <article class="card mb-lg">
+                            <div class="card-body">
+                                <div class="d-flex gap-sm mb-md">
+                                    <span class="badge badge-success">Développement</span>
+                                    <span class="badge badge-info">CSS</span>
+                                </div>
+                                <h2>Comment créer une bibliothèque CSS flexible</h2>
+                                <p class="text-muted">Publié le 10 décembre 2024 par Développeur</p>
+                                <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <button class="btn btn-outline-primary">Lire la suite</button>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="card mb-md">
+                            <div class="card-header">
+                                <h5 class="card-title">Catégories</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>Technologie</span>
+                                        <span class="badge badge-primary">15</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>Développement</span>
+                                        <span class="badge badge-secondary">23</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>Design</span>
+                                        <span class="badge badge-success">8</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>Business</span>
+                                        <span class="badge badge-info">12</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Articles populaires</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="mb-sm">
+                                    <a href="#" class="text-decoration-none">Les bases du CSS moderne</a>
+                                    <p class="text-muted font-size-sm">2,345 vues</p>
+                                </div>
+                                <div class="mb-sm">
+                                    <a href="#" class="text-decoration-none">Optimiser ses performances web</a>
+                                    <p class="text-muted font-size-sm">1,876 vues</p>
+                                </div>
+                                <div>
+                                    <a href="#" class="text-decoration-none">Guide complet du responsive design</a>
+                                    <p class="text-muted font-size-sm">1,234 vues</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-xl">
+            <a href="index.html" class="btn btn-primary">Retour à la démonstration</a>
+        </div>
+    </div>
+    
+    <script>
+        function changeTheme(theme) {
+            // Retirer la classe active de tous les boutons
+            document.querySelectorAll('.theme-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Ajouter la classe active au bouton cliqué
+            event.target.classList.add('active');
+            
+            // Changer le thème
+            if (theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+            }
+        }
+    </script>
+</body>
+</html> 

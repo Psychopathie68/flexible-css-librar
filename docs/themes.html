@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thèmes - Flexible CSS Library</title>
+    <link rel="stylesheet" href="../dist/flexible-css.css">
+    <link rel="stylesheet" href="flexible-css.css">
+    <style>
+        .theme-demo {
+            margin-bottom: var(--spacing-xl);
+            padding: var(--spacing-lg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+        }
+        
+        .theme-title {
+            margin-bottom: var(--spacing-md);
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-bold);
+        }
+        
+        .theme-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .color-palette {
+            display: flex;
+            gap: var(--spacing-xs);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .color-swatch {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--border-radius-sm);
+            border: 1px solid var(--border-color);
+        }
+        
+        .theme-code {
+            background: var(--bg-secondary);
+            padding: var(--spacing-md);
+            border-radius: var(--border-radius);
+            font-family: var(--font-family-mono);
+            font-size: var(--font-size-sm);
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-xl">Thèmes de Flexible CSS Library</h1>
+        
+        <!-- Thème par défaut -->
+        <div class="theme-demo">
+            <h2 class="theme-title">Thème par défaut</h2>
+            <div class="color-palette">
+                <div class="color-swatch" style="background: var(--primary-color);"></div>
+                <div class="color-swatch" style="background: var(--secondary-color);"></div>
+                <div class="color-swatch" style="background: var(--success-color);"></div>
+                <div class="color-swatch" style="background: var(--danger-color);"></div>
+                <div class="color-swatch" style="background: var(--warning-color);"></div>
+                <div class="color-swatch" style="background: var(--info-color);"></div>
+            </div>
+            
+            <div class="theme-grid">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Carte exemple</h5>
+                        <p class="card-text">Voici un exemple de carte avec le thème par défaut.</p>
+                        <button class="btn btn-primary">Bouton principal</button>
+                        <button class="btn btn-secondary">Bouton secondaire</button>
+                    </div>
+                </div>
+                
+                <div class="alert alert-success">
+                    <strong>Succès !</strong> Ceci est un message de succès.
+                </div>
+                
+                <div class="alert alert-danger">
+                    <strong>Erreur !</strong> Ceci est un message d'erreur.
+                </div>
+            </div>
+            
+            <div class="theme-code">
+&lt;!-- Utilisation par défaut --&gt;
+&lt;html&gt;
+    &lt;!-- Votre contenu --&gt;
+&lt;/html&gt;
+            </div>
+        </div>
+        
+        <!-- Thème sombre -->
+        <div class="theme-demo" data-theme="dark">
+            <h2 class="theme-title">Thème sombre</h2>
+            <div class="color-palette">
+                <div class="color-swatch" style="background: var(--primary-color);"></div>
+                <div class="color-swatch" style="background: var(--secondary-color);"></div>
+                <div class="color-swatch" style="background: var(--success-color);"></div>
+                <div class="color-swatch" style="background: var(--danger-color);"></div>
+                <div class="color-swatch" style="background: var(--warning-color);"></div>
+                <div class="color-swatch" style="background: var(--info-color);"></div>
+            </div>
+            
+            <div class="theme-grid">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Carte exemple</h5>
+                        <p class="card-text">Voici un exemple de carte avec le thème sombre.</p>
+                        <button class="btn btn-primary">Bouton principal</button>
+                        <button class="btn btn-secondary">Bouton secondaire</button>
+                    </div>
+                </div>
+                
+                <div class="alert alert-success">
+                    <strong>Succès !</strong> Ceci est un message de succès.
+                </div>
+                
+                <div class="alert alert-danger">
+                    <strong>Erreur !</strong> Ceci est un message d'erreur.
+                </div>
+            </div>
+            
+            <div class="theme-code">
+&lt;html data-theme="dark"&gt;
+    &lt;!-- Votre contenu --&gt;
+&lt;/html&gt;
+            </div>
+        </div>
+        
+        <!-- Thème minimal -->
+        <div class="theme-demo" data-theme="minimal">
+            <h2 class="theme-title">Thème minimal</h2>
+            <div class="color-palette">
+                <div class="color-swatch" style="background: var(--primary-color);"></div>
+                <div class="color-swatch" style="background: var(--secondary-color);"></div>
+                <div class="color-swatch" style="background: var(--success-color);"></div>
+                <div class="color-swatch" style="background: var(--danger-color);"></div>
+                <div class="color-swatch" style="background: var(--warning-color);"></div>
+                <div class="color-swatch" style="background: var(--info-color);"></div>
+            </div>
+            
+            <div class="theme-grid">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Carte exemple</h5>
+                        <p class="card-text">Voici un exemple de carte avec le thème minimal.</p>
+                        <button class="btn btn-primary">Bouton principal</button>
+                        <button class="btn btn-secondary">Bouton secondaire</button>
+                    </div>
+                </div>
+                
+                <div class="alert alert-success">
+                    <strong>Succès !</strong> Ceci est un message de succès.
+                </div>
+                
+                <div class="alert alert-danger">
+                    <strong>Erreur !</strong> Ceci est un message d'erreur.
+                </div>
+            </div>
+            
+            <div class="theme-code">
+&lt;html data-theme="minimal"&gt;
+    &lt;!-- Votre contenu --&gt;
+&lt;/html&gt;
+            </div>
+        </div>
+        
+        <!-- Thème coloré -->
+        <div class="theme-demo" data-theme="colorful">
+            <h2 class="theme-title">Thème coloré</h2>
+            <div class="color-palette">
+                <div class="color-swatch" style="background: var(--primary-color);"></div>
+                <div class="color-swatch" style="background: var(--secondary-color);"></div>
+                <div class="color-swatch" style="background: var(--success-color);"></div>
+                <div class="color-swatch" style="background: var(--danger-color);"></div>
+                <div class="color-swatch" style="background: var(--warning-color);"></div>
+                <div class="color-swatch" style="background: var(--info-color);"></div>
+            </div>
+            
+            <div class="theme-grid">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Carte exemple</h5>
+                        <p class="card-text">Voici un exemple de carte avec le thème coloré.</p>
+                        <button class="btn btn-primary">Bouton principal</button>
+                        <button class="btn btn-secondary">Bouton secondaire</button>
+                    </div>
+                </div>
+                
+                <div class="alert alert-success">
+                    <strong>Succès !</strong> Ceci est un message de succès.
+                </div>
+                
+                <div class="alert alert-danger">
+                    <strong>Erreur !</strong> Ceci est un message d'erreur.
+                </div>
+            </div>
+            
+            <div class="theme-code">
+&lt;html data-theme="colorful"&gt;
+    &lt;!-- Votre contenu --&gt;
+&lt;/html&gt;
+            </div>
+        </div>
+        
+        <!-- Créer un thème personnalisé -->
+        <div class="theme-demo">
+            <h2 class="theme-title">Créer votre propre thème</h2>
+            <p>Vous pouvez créer vos propres thèmes en définissant des variables CSS personnalisées :</p>
+            
+            <div class="theme-code">
+/* Définir un thème personnalisé */
+[data-theme="mon-theme"] {
+  --primary-color: #ff6b6b;
+  --secondary-color: #4ecdc4;
+  --success-color: #45b7d1;
+  --danger-color: #e74c3c;
+  --warning-color: #f9ca24;
+  --info-color: #3498db;
+  
+  --bg-primary: #f8f9fa;
+  --text-primary: #2c3e50;
+  --border-radius: 12px;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Utilisation */
+&lt;html data-theme="mon-theme"&gt;
+    &lt;!-- Votre contenu --&gt;
+&lt;/html&gt;
+            </div>
+        </div>
+        
+        <div class="text-center mt-xl">
+            <a href="index.html" class="btn btn-primary">Retour à la démonstration</a>
+        </div>
+    </div>
+</body>
+</html> 

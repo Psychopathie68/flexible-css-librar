@@ -1,0 +1,118 @@
+// ========================================
+// COMPOSANT TOGGLES (SWITCHES)
+// ========================================
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  gap: var(--spacing-sm);
+}
+
+.toggle-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 2.5rem;
+  height: 1.4rem;
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius-full);
+  transition: background var(--transition-base);
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+}
+
+.toggle-switch::before {
+  content: '';
+  position: absolute;
+  left: 0.2rem;
+  top: 0.2rem;
+  width: 1rem;
+  height: 1rem;
+  background: white;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition-base), background var(--transition-base);
+}
+
+.toggle-input:checked + .toggle-switch {
+  background: var(--primary-color);
+}
+
+.toggle-input:checked + .toggle-switch::before {
+  transform: translateX(1.1rem);
+  background: var(--primary-color);
+}
+
+// Désactivé
+.toggle-input:disabled + .toggle-switch {
+  background: var(--border-light);
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.toggle-label {
+  font-size: var(--font-size-base);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+// Tailles
+.toggle-sm .toggle-switch {
+  width: 1.8rem;
+  height: 1rem;
+}
+.toggle-sm .toggle-switch::before {
+  width: 0.6rem;
+  height: 0.6rem;
+  left: 0.15rem;
+  top: 0.2rem;
+}
+.toggle-sm .toggle-input:checked + .toggle-switch::before {
+  transform: translateX(0.6rem);
+}
+
+.toggle-lg .toggle-switch {
+  width: 3.5rem;
+  height: 2rem;
+}
+.toggle-lg .toggle-switch::before {
+  width: 1.5rem;
+  height: 1.5rem;
+  left: 0.25rem;
+  top: 0.25rem;
+}
+.toggle-lg .toggle-input:checked + .toggle-switch::before {
+  transform: translateX(1.5rem);
+}
+
+// Variantes de couleur
+.toggle-primary .toggle-input:checked + .toggle-switch { background: var(--primary-color); }
+.toggle-success .toggle-input:checked + .toggle-switch { background: var(--success-color); }
+.toggle-danger .toggle-input:checked + .toggle-switch { background: var(--danger-color); }
+.toggle-warning .toggle-input:checked + .toggle-switch { background: var(--warning-color); }
+.toggle-info .toggle-input:checked + .toggle-switch { background: var(--info-color); }
+.toggle-dark .toggle-input:checked + .toggle-switch { background: var(--dark-color); }
+
+// Animation
+.toggle-switch {
+  will-change: background, transform;
+}
+
+// Accessibilité
+.toggle-input:focus + .toggle-switch {
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.2);
+}
+
+// Responsive
+@media (max-width: var(--breakpoint-md)) {
+  .toggle-label { font-size: var(--font-size-sm); }
+  .toggle-switch { width: 2rem; height: 1.1rem; }
+  .toggle-switch::before { width: 0.8rem; height: 0.8rem; }
+} 
