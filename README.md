@@ -25,9 +25,6 @@ Une bibliothèque CSS moderne, flexible et configurable pour tous types de sites
 npm install flexible-css-library
 ```
 
-### Téléchargement direct
-Téléchargez les fichiers CSS depuis le dossier `dist/` et incluez-les dans votre projet.
-
 ## 🎨 Configuration
 
 ### Variables CSS personnalisées
