@@ -10,6 +10,7 @@
     "src/",
     "README.md",
     "GUIDE-THEMES-JS.md",
+    "GUIDE-GENERATEUR.md",
     "RESUME-OPTIMISATION.md"
   ],
   "scripts": {
@@ -19,6 +20,7 @@
     "dev:optimized": "sass src/flexible-optimized.scss:dist/flexible-css-optimized.css --watch",
     "docs": "live-server docs --port=3000",
     "demo": "live-server . --port=3001 --open=demo-theme-switcher.html",
+    "generator": "live-server . --port=3002 --open=theme-generator.html",
     "prepublishOnly": "npm run build && npm run build:optimized"
   },
   "keywords": [
