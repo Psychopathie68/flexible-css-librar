@@ -1,19 +1,25 @@
 {
   "name": "flexible-css-library",
-  "version": "1.0.0",
-  "description": "Une bibliothèque CSS ultra-flexible avec 10 thèmes prédéfinis pour tous les styles de sites web",
+  "version": "1.1.0",
+  "description": "Une bibliothèque CSS ultra-flexible avec système de thèmes JavaScript dynamique - 10 thèmes prédéfinis, performance optimisée (50% de réduction de taille)",
   "main": "dist/flexible-css.css",
   "files": [
-    "dist/",
+    "dist/flexible-css.css",
+    "dist/flexible-css-optimized.css",
+    "dist/themes.js",
     "src/",
     "README.md",
-    "USAGE.md"
+    "GUIDE-THEMES-JS.md",
+    "RESUME-OPTIMISATION.md"
   ],
   "scripts": {
     "build": "sass src/main.scss:dist/flexible-css.css --style compressed",
+    "build:optimized": "node build-optimized.js",
     "dev": "sass src/main.scss:dist/flexible-css.css --watch",
+    "dev:optimized": "sass src/flexible-optimized.scss:dist/flexible-css-optimized.css --watch",
     "docs": "live-server docs --port=3000",
-    "prepublishOnly": "npm run build"
+    "demo": "live-server . --port=3001 --open=demo-theme-switcher.html",
+    "prepublishOnly": "npm run build && npm run build:optimized"
   },
   "keywords": [
     "css",
@@ -22,9 +28,14 @@
     "responsive",
     "flexible",
     "themes",
+    "javascript",
+    "dynamic-themes",
+    "theme-switcher",
     "bootstrap-alternative",
     "ui-components",
-    "design-system"
+    "design-system",
+    "performance",
+    "optimized"
   ],
   "author": "Psychopathie68",
   "license": "MIT",
